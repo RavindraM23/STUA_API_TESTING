@@ -1,0 +1,10 @@
+{
+  "dudu": {
+	  "station_name": "Chambers",
+	  "train1": {
+	  	"route_id": "2",
+	  	"terminus": "Flatbush Av-Brooklyn College",
+	  	"time": 5
+	  }
+  }
+}

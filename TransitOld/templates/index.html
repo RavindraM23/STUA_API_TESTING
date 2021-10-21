@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+	var source = new EventSource("/stations");
+	source.onmessage = function(event) {
+		const obj = JSON.parse(event.data);
+		document.getElementById("broadway").innerHTML = obj.dudu.station_name;
+	}
+	</script>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: aqua;">
+		<h1 id="broadway">
+			Starting
+		</h1>
+	</div>
+</body>
+</html>
