@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+	var source = new EventSource("/stations");
+	source.onmessage = function(event) {
+		const obj = JSON.parse(event.data);
+		document.getElementById("broadway").innerHTML = obj.terminus;
+		document.getElementById("stop").innerHTML = obj.time;
+		document.getElementById("photo").src = obj.route_emblem;
+	}
+	</script>
+</head>
+<body>
+	<div class="container" style="background-color: aqua; height: 100vh;">
+		<div class="row" style="background-color: bisque; height: 7vh;">
+            <div class="col-sm-12">
+                <img class="float-left img-fluid photo" src="/static/emblems/a.svg" width="300px" height="300px">
+            </div>
+        </div>
+	</div>
+</body>
+</html>
