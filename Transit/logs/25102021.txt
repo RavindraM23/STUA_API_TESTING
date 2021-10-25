@@ -1,0 +1,324 @@
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:01.236699
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:08.141977
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:15.020508
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:23.222092
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:30.053501
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 14:27:36.847532
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [2, '3', 'Harlem-148 St']] 2021-10-25 14:27:43.643083
+['Franklin Avenue-Medgar Evers College', [0, '5', 'Eastchester-Dyre Av'], [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St']] 2021-10-25 14:27:50.559928
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:27:58.611867
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:05.409401
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:12.161947
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:19.936362
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:27.121216
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:35.005607
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:42.098002
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:48.962646
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:28:55.790735
+['Franklin Avenue-Medgar Evers College', [0, '4', 'Woodlawn'], [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St']] 2021-10-25 14:29:02.789091
+['Franklin Avenue-Medgar Evers College', [0, '5', 'Eastchester-Dyre Av'], [1, '3', 'Harlem-148 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 14:29:09.571320
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [0, '5', 'Eastchester-Dyre Av'], [4, '2', 'Wakefield-241 St']] 2021-10-25 14:29:16.695380
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [0, '5', 'Eastchester-Dyre Av'], [4, '2', 'Wakefield-241 St']] 2021-10-25 14:29:23.929876
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [0, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St']] 2021-10-25 14:29:30.913538
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [0, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St']] 2021-10-25 14:29:38.333980
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [0, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St']] 2021-10-25 14:29:45.115152
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [6, '4', 'Woodlawn']] 2021-10-25 14:29:51.924254
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [6, '4', 'Woodlawn']] 2021-10-25 14:29:58.710747
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [6, '4', 'Woodlawn']] 2021-10-25 14:30:06.181185
+['Franklin Avenue-Medgar Evers College', [0, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [6, '4', 'Woodlawn']] 2021-10-25 14:30:13.304517
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:30:58.225168
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:05.568503
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:06.003602
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:13.791432
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:13.815379
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:20.814708
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 14:31:27.806835
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 14:31:34.905675
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 14:31:42.810580
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 14:31:50.259683
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:51:36.660274
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:51:42.586022
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [6, '5', 'Nereid Av']] 2021-10-25 15:51:48.963521
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:51:55.161002
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:52:01.200868
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:52:07.634782
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [5, '5', 'Nereid Av']] 2021-10-25 15:52:14.794595
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [5, '5', 'Nereid Av']] 2021-10-25 15:52:22.469897
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [5, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St']] 2021-10-25 15:52:29.229540
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [5, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St']] 2021-10-25 15:52:36.117864
+['Franklin Avenue-Medgar Evers College', [5, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [9, '4', 'Woodlawn']] 2021-10-25 15:52:42.098789
+['Franklin Avenue-Medgar Evers College', [5, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [9, '4', 'Woodlawn']] 2021-10-25 15:52:48.373773
+['Franklin Avenue-Medgar Evers College', [5, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [9, '4', 'Woodlawn']] 2021-10-25 15:52:56.695089
+['Franklin Avenue-Medgar Evers College', [4, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [8, '4', 'Woodlawn']] 2021-10-25 15:53:02.959522
+['Franklin Avenue-Medgar Evers College', [4, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [8, '4', 'Woodlawn']] 2021-10-25 15:53:08.873684
+['Franklin Avenue-Medgar Evers College', [4, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [8, '4', 'Woodlawn']] 2021-10-25 15:53:16.174274
+['Franklin Avenue-Medgar Evers College', [4, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St'], [8, '4', 'Woodlawn']] 2021-10-25 15:53:23.810424
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [4, '5', 'Nereid Av'], [8, '2', 'Wakefield-241 St']] 2021-10-25 15:53:32.064876
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [4, '5', 'Nereid Av'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:53:38.037135
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [4, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:53:44.079501
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:53:51.342524
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:53:57.277678
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:54:04.557192
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:54:11.934257
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '5', 'Nereid Av'], [7, '2', 'Wakefield-241 St']] 2021-10-25 15:54:18.103776
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '5', 'Nereid Av'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:26.047700
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '5', 'Nereid Av'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:33.158966
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [6, '2', 'Wakefield-241 St'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:39.219044
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [6, '2', 'Wakefield-241 St'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:45.228052
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [6, '2', 'Wakefield-241 St'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:51.218763
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [6, '2', 'Wakefield-241 St'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:54:57.622563
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [5, '5', 'Eastchester-Dyre Av'], [6, '2', 'Wakefield-241 St']] 2021-10-25 15:55:03.878756
+['Franklin Avenue-Medgar Evers College', [3, '5', 'Nereid Av'], [5, '5', 'Eastchester-Dyre Av'], [6, '2', 'Wakefield-241 St']] 2021-10-25 15:55:09.874641
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '5', 'Eastchester-Dyre Av'], [6, '2', 'Wakefield-241 St']] 2021-10-25 15:55:15.797914
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '5', 'Eastchester-Dyre Av'], [6, '2', 'Wakefield-241 St']] 2021-10-25 15:55:22.294834
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '5', 'Eastchester-Dyre Av'], [6, '2', 'Wakefield-241 St']] 2021-10-25 15:55:28.997993
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:55:36.163501
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:55:43.500880
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:55:51.083117
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:55:57.300779
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 15:56:03.209654
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 15:56:10.812673
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [5, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 15:56:18.252821
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '5', 'Eastchester-Dyre Av'], [5, '2', 'Wakefield-241 St']] 2021-10-25 15:56:24.950209
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '5', 'Eastchester-Dyre Av'], [5, '2', 'Wakefield-241 St']] 2021-10-25 15:56:30.862229
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '5', 'Eastchester-Dyre Av'], [5, '2', 'Wakefield-241 St']] 2021-10-25 15:56:36.896464
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '5', 'Eastchester-Dyre Av'], [5, '2', 'Wakefield-241 St']] 2021-10-25 15:56:42.788013
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '2', 'Wakefield-241 St'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:56:48.870227
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [4, '2', 'Wakefield-241 St'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:56:55.065127
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [3, '5', 'Eastchester-Dyre Av'], [4, '2', 'Wakefield-241 St']] 2021-10-25 15:57:00.946894
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [3, '5', 'Eastchester-Dyre Av'], [4, '2', 'Wakefield-241 St']] 2021-10-25 15:57:07.103855
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:13.085463
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:18.781493
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:26.505957
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:32.606940
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:38.596866
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:44.494844
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:50.497670
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av'], [4, '4', 'Woodlawn']] 2021-10-25 15:57:59.887923
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:07.131266
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:14.398213
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:22.142918
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:28.338103
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:34.442906
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:40.532282
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:46.453321
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:58:54.103726
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Eastchester-Dyre Av'], [3, '4', 'Woodlawn']] 2021-10-25 15:59:01.043813
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 15:59:07.402969
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 15:59:13.509600
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:59:19.623984
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 15:59:25.633708
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn']] 2021-10-25 15:59:31.683853
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn']] 2021-10-25 15:59:37.628360
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn']] 2021-10-25 15:59:44.044031
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 15:59:52.040471
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 15:59:59.084520
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [2, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:00:13.894357
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [1, '5', 'Eastchester-Dyre Av'], [2, '3', 'Harlem-148 St']] 2021-10-25 16:00:20.172231
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:00:30.034914
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:00:37.283099
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:08:32.471799
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:08:39.726791
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:08:47.837093
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:08:53.966508
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:08:59.938074
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Nereid Av']] 2021-10-25 16:09:08.367749
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Nereid Av']] 2021-10-25 16:09:17.952888
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [7, '5', 'Nereid Av']] 2021-10-25 16:09:26.723051
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:09:33.314489
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:09:40.377308
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '5', 'Nereid Av']] 2021-10-25 16:09:46.754727
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '5', 'Nereid Av']] 2021-10-25 16:09:54.092620
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn']] 2021-10-25 16:10:00.979115
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn']] 2021-10-25 16:10:10.834801
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn']] 2021-10-25 16:10:17.360673
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:14:47.352845
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:14:53.578291
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:14:59.615983
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn']] 2021-10-25 16:15:05.612183
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:18:34.563407
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '2', 'Wakefield-241 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:18:41.583638
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '2', 'Wakefield-241 St'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:18:48.258393
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:18:54.008895
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:19:14.364774
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:19:22.432459
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:22:07.820086
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:22:16.927758
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [7, '3', 'Harlem-148 St']] 2021-10-25 16:22:25.297019
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [7, '3', 'Harlem-148 St']] 2021-10-25 16:22:31.227093
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [7, '3', 'Harlem-148 St']] 2021-10-25 16:22:39.316717
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [7, '3', 'Harlem-148 St']] 2021-10-25 16:22:45.331787
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [6, '3', 'Harlem-148 St']] 2021-10-25 16:22:51.641693
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [6, '3', 'Harlem-148 St']] 2021-10-25 16:22:57.842484
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [6, '3', 'Harlem-148 St']] 2021-10-25 16:23:04.378236
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:23:10.243971
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:23:17.558315
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:23:23.793971
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [7, '4', 'Woodlawn']] 2021-10-25 16:23:30.017185
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:23:36.367171
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:23:42.715373
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:23:48.796237
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:23:54.747491
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:24:00.705777
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:24:06.974495
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:24:14.822459
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:24:21.370938
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [5, '3', 'Harlem-148 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:24:27.331242
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:24:33.341947
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:24:39.243180
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:24:45.167903
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:24:51.190077
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:25:01.404443
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [4, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:25:01.731070
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:25:08.243567
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:25:14.798615
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:25:23.068572
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [5, '4', 'Woodlawn'], [6, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:25:31.678784
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [6, '5', 'Nereid Av']] 2021-10-25 16:25:37.643539
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:25:44.538349
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:25:52.176466
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:25:59.138610
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:05.084608
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:05.230470
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:11.059484
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:13.224601
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:16.980309
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:28.815709
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:29.678525
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:26:36.600243
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:09.180891
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:15.269356
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:21.125108
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:27.115216
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:33.891300
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:27:35.841963
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [3, '2', 'Wakefield-241 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:29:34.164255
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:29:40.094423
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:30:22.874398
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [6, '4', 'Woodlawn']] 2021-10-25 16:30:28.865649
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:30:34.900730
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:30:42.220410
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:30:48.404191
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:30:54.578386
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Nereid Av'], [5, '4', 'Woodlawn']] 2021-10-25 16:31:03.479767
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Nereid Av'], [5, '4', 'Woodlawn']] 2021-10-25 16:31:09.463501
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '5', 'Nereid Av'], [5, '4', 'Woodlawn']] 2021-10-25 16:31:15.532894
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [6, '2', 'Wakefield-241 St']] 2021-10-25 16:31:21.928818
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn'], [6, '2', 'Wakefield-241 St']] 2021-10-25 16:31:28.279540
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '2', 'Wakefield-241 St']] 2021-10-25 16:31:34.219315
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [6, '2', 'Wakefield-241 St']] 2021-10-25 16:31:42.719510
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:31:48.699819
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:31:54.758206
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:01.816766
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:08.400395
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:14.344637
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:20.285888
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:26.835630
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:33.041237
+['Franklin Avenue-Medgar Evers College', [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:32:38.889388
+['Franklin Avenue-Medgar Evers College', [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:32:44.912637
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '4', 'Woodlawn'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:32:50.990730
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [4, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn']] 2021-10-25 16:32:57.145392
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:33:03.295149
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:33:09.189599
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:33:15.569819
+['Franklin Avenue-Medgar Evers College', [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn'], [4, '2', 'Wakefield-241 St']] 2021-10-25 16:33:22.044671
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:29.147090
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:35.010630
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:41.250083
+['Franklin Avenue-Medgar Evers College', [3, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:47.355966
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:53.657013
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:33:58.657707
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:34:04.657938
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:34:11.264966
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:34:17.932589
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:34:23.952655
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:34:30.722564
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:34:37.718872
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:34:44.138840
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:34:50.222364
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:35:02.392301
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:35:09.022444
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:35:14.922792
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:35:20.928382
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '3', 'Harlem-148 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:35:27.354182
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:35:33.391818
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:35:40.962513
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:35:46.982044
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:35:52.955070
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:35:58.979870
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:36:05.119370
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:36:11.082455
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn']] 2021-10-25 16:36:18.609988
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '4', 'Woodlawn'], [5, '5', 'Nereid Av']] 2021-10-25 16:36:24.646406
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:36:33.854797
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn']] 2021-10-25 16:36:39.905478
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [5, '5', 'Nereid Av']] 2021-10-25 16:36:45.848381
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [5, '5', 'Nereid Av']] 2021-10-25 16:36:52.360158
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [4, '5', 'Nereid Av']] 2021-10-25 16:36:58.735281
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [4, '5', 'Nereid Av']] 2021-10-25 16:37:05.784180
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [4, '5', 'Nereid Av']] 2021-10-25 16:37:11.824748
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [4, '5', 'Nereid Av']] 2021-10-25 16:37:18.129112
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [2, '4', 'Woodlawn'], [3, '5', 'Nereid Av']] 2021-10-25 16:37:23.984941
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '5', 'Nereid Av']] 2021-10-25 16:37:29.904787
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '5', 'Nereid Av']] 2021-10-25 16:37:36.085020
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [1, '4', 'Woodlawn'], [3, '5', 'Nereid Av']] 2021-10-25 16:37:42.569953
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:38:40.903267
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:38:47.134765
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:38:53.108792
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:39:03.554957
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:39:09.929210
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:39:15.917517
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:39:22.882143
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Nereid Av'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:39:30.268590
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '4', 'Woodlawn'], [4, '3', 'Harlem-148 St']] 2021-10-25 16:40:26.180994
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Nereid Av'], [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:40:32.360326
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:40:40.421431
+['Franklin Avenue-Medgar Evers College', [2, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [4, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:40:46.641004
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:40:52.810927
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:40:58.711393
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:07.392939
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:13.971497
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:21.661524
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [3, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:27.956666
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:34.036167
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:39.905902
+['Franklin Avenue-Medgar Evers College', [1, '4', 'Woodlawn'], [2, '3', 'Harlem-148 St'], [3, '3', 'Harlem-148 St']] 2021-10-25 16:41:46.355695
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [2, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:41:54.360538
+['Franklin Avenue-Medgar Evers College', [2, '3', 'Harlem-148 St'], [2, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:02.945357
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:09.575665
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:23.191298
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:29.406615
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:37.214642
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:44.150553
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [3, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:42:50.181057
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:42:56.179819
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:43:02.151583
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:43:08.328784
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [1, '3', 'Harlem-148 St'], [2, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:43:14.591781
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St']] 2021-10-25 16:43:26.331220
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:43:32.946890
+['Franklin Avenue-Medgar Evers College', [2, '5', 'Eastchester-Dyre Av'], [3, '2', 'Wakefield-241 St'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:43:38.824477
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:46:19.252034
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:46:26.014061
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av']] 2021-10-25 16:46:31.985927
+['Franklin Avenue-Medgar Evers College', [3, '4', 'Woodlawn'], [5, '5', 'Eastchester-Dyre Av'], [8, '3', 'Harlem-148 St']] 2021-10-25 16:46:59.260355
+['Franklin Avenue-Medgar Evers College', [1, '5', 'Eastchester-Dyre Av'], [3, '3', 'Harlem-148 St'], [5, '2', 'Wakefield-241 St']] 2021-10-25 16:50:52.264949
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:52:52.299493
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [3, '2', 'Wakefield-241 St'], [5, '4', 'Woodlawn']] 2021-10-25 16:52:59.552231
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn']] 2021-10-25 16:53:06.663425
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn']] 2021-10-25 16:53:13.677501
+['Franklin Avenue-Medgar Evers College', [1, '3', 'Harlem-148 St'], [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn']] 2021-10-25 16:53:20.103589
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:53:44.066237
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:53:50.006297
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [4, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:53:56.872882
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '4', 'Woodlawn'], [5, '3', 'Harlem-148 St']] 2021-10-25 16:54:02.867800
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:08.706816
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:14.863136
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:21.027034
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:27.831632
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:33.746494
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:39.645938
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:45.902930
+['Franklin Avenue-Medgar Evers College', [2, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:52.064487
+['Franklin Avenue-Medgar Evers College', [1, '2', 'Wakefield-241 St'], [3, '3', 'Harlem-148 St'], [3, '4', 'Woodlawn']] 2021-10-25 16:54:58.286500

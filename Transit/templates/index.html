@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+	var stations = new EventSource("/stations");
+	stations.onmessage = function(event) {
+		const obj = JSON.parse(event.data);
+		document.getElementById("terminus").innerHTML = obj.terminus;
+		document.getElementById("photo").src = obj.route_emblem;
+		document.getElementById("countdown").innerHTML = obj.time + " min";
+	}
+	var interfaces = new EventSource("/interfaces");
+	interfaces.onmessage = function(event) {
+	        const obj = JSON.parse(event.data);
+	        document.getElementById("time").innerHTML = obj.time;
+	} 
+	</script>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: aqua; height: 100vh;">
+	    <div class="row" style="background-color: bisque;">
+                <div class="col-sm-6">
+                    <h2 id="time" style="text-align: left;">Placeholder</h2>
+                </div>
+                <div class="col-sm-6">
+                    <h2 style="text-align: right;">Stuyvesant High School</h2>
+                </div>
+            </div>
+            <div class="row" style="background-color: aquamarine;">
+                <div class="col-sm-5">
+                    <div class="row" style="background-color: red;">
+                        <div class="col-sm-5">
+                            <img id="photo" src="/static/emblems/a.svg" style="height: 100px; width: 100px;">
+                        </div>
+                        <div class="col-sm-7">
+                            <h2>Testing</h2>
+                        </div>
+                    </div>
+                    <div class="row" style="background-color: yellow;">
+                        <h2 id="terminus">Testing</h2>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <h2>Testing</h2>
+                </div>
+            </div>
+	</div>
+</body>
+</html>
