@@ -53,7 +53,7 @@ def transit(stop, direction):
                         times[temp].append(f'{row[5]}')
                         times[temp].pop(2)
         if (times[temp][1] == "FX"):
-            times[temp][1] = "F"
+            times[temp][1] = "fd"
         elif (times[temp][1] == "5X"):
             times[temp][1] = "5"
         elif (times[temp][1] == "6X"):

@@ -1,0 +1,149 @@
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [3, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:36:11.904557
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [3, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:36:18.832037
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [3, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:36:26.051622
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:36:33.136953
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'f', 'Jamaica-179 St']] 2021-11-26 09:36:40.238037
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [7, 'f', 'Jamaica-179 St']] 2021-11-26 09:36:47.215930
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [7, 'f', 'Jamaica-179 St']] 2021-11-26 09:36:54.329371
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [7, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:01.434610
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [6, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:08.615927
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [6, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:15.580700
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [6, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:22.580428
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [6, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:29.715332
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [6, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:36.719435
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:43.786370
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:50.996154
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:37:57.983169
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:38:04.962284
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:38:11.876495
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:38:18.951938
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [1, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St']] 2021-11-26 09:38:26.241426
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [5, 'f', 'Jamaica-179 St'], [7, 'e', 'Jamaica-179 St']] 2021-11-26 09:38:33.193562
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St']] 2021-11-26 09:38:40.506847
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [8, 'F', 'Jamaica-179 St']] 2021-11-26 09:38:47.426669
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [8, 'F', 'Jamaica-179 St']] 2021-11-26 09:38:54.332569
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [7, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:01.437459
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:08.446446
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:15.370069
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:22.312868
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:29.419737
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:36.602944
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:43.704619
+['Jackson Hts-Roosevelt Av', [4, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:50.758378
+['Jackson Hts-Roosevelt Av', [3, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:39:57.878227
+['Jackson Hts-Roosevelt Av', [3, 'f', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St'], [6, 'F', 'Jamaica-179 St']] 2021-11-26 09:40:04.921450
+['Jackson Hts-Roosevelt Av', [3, 'f', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St']] 2021-11-26 09:40:11.847203
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St']] 2021-11-26 09:40:19.006385
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St'], [6, 'e', 'Jamaica-179 St']] 2021-11-26 09:40:26.165496
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [5, 'e', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St']] 2021-11-26 09:40:33.293250
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St']] 2021-11-26 09:40:40.312635
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St']] 2021-11-26 09:40:47.352665
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St']] 2021-11-26 09:40:54.360052
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [5, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:01.569566
+['Jackson Hts-Roosevelt Av', [2, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:08.878602
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:15.942044
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:22.989821
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:30.127565
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:37.120314
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:44.171965
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:51.336079
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:41:58.434199
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:42:05.494521
+['Jackson Hts-Roosevelt Av', [1, 'f', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'F', 'Jamaica-179 St']] 2021-11-26 09:42:12.506538
+['Jackson Hts-Roosevelt Av', [3, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:19.510624
+['Jackson Hts-Roosevelt Av', [3, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:26.902303
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:33.972877
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:41.048440
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:48.041287
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [4, 'e', 'Jamaica-179 St'], [4, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:42:55.034854
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:02.029679
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:08.951772
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:15.850974
+['Jackson Hts-Roosevelt Av', [2, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:23.059732
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:30.095097
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica-179 St']] 2021-11-26 09:43:37.179294
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av'], [3, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:43:44.378495
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [3, 'e', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:43:51.418505
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [3, 'e', 'Jamaica-179 St'], [3, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:43:58.449973
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:05.544824
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:12.682114
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:19.716081
+['Jackson Hts-Roosevelt Av', [1, 'F', 'Jamaica-179 St'], [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:26.835710
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av'], [3, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:34.110270
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av'], [3, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:41.215273
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:48.203895
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica-179 St'], [2, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:44:55.202725
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:02.209420
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:09.347524
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:16.345611
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:23.444512
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:30.774299
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [2, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:37.695510
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [1, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:44.888079
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [1, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:52.084003
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica-179 St'], [1, 'r', 'Forest Hills-71 Av'], [1, 'r', 'Forest Hills-71 Av']] 2021-11-26 09:45:59.169481
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:06.378036
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:13.341333
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:20.419002
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:27.368500
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:34.534613
+['Jackson Hts-Roosevelt Av', [1, 'r', 'Forest Hills-71 Av'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:41.701369
+['Jackson Hts-Roosevelt Av', [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:48.753691
+['Jackson Hts-Roosevelt Av', [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:46:55.652616
+['Jackson Hts-Roosevelt Av', [4, 'm', 'Forest Hills-71 Av'], [5, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:02.700164
+['Jackson Hts-Roosevelt Av', [4, 'm', 'Forest Hills-71 Av'], [5, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:09.624717
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:16.627864
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:23.695973
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:30.635294
+['Jackson Hts-Roosevelt Av', [3, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:37.696700
+['Jackson Hts-Roosevelt Av', [3, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:44.701198
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:52.002806
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:47:59.054964
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:06.235841
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:13.401597
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:20.371434
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:27.577069
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:34.636883
+['Jackson Hts-Roosevelt Av', [2, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:41.740838
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:48.776803
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:48:56.217395
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:49:03.225300
+['Jackson Hts-Roosevelt Av', [1, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:49:10.196652
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:17.209403
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:24.219303
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:31.269627
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:38.836292
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:46.011926
+['Jackson Hts-Roosevelt Av', [3, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [7, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:49:53.226853
+['Jackson Hts-Roosevelt Av', [3, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:00.466442
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:07.687522
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:14.847357
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:21.827295
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:28.977417
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [6, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:35.977384
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:42.927402
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:50.017273
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:50:56.964484
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:03.963126
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:10.956971
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:17.957054
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:25.017181
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:32.011610
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:38.988610
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:45.979471
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [5, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:52.956445
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:51:59.966522
+['Jackson Hts-Roosevelt Av', [1, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av']] 2021-11-26 09:52:06.893235
+['Jackson Hts-Roosevelt Av', [4, 'e', 'Jamaica Center-Parsons/Archer'], [4, 'm', 'Forest Hills-71 Av'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:13.927755
+['Jackson Hts-Roosevelt Av', [3, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:20.936600
+['Jackson Hts-Roosevelt Av', [3, 'm', 'Forest Hills-71 Av'], [4, 'e', 'Jamaica Center-Parsons/Archer'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:28.196680
+['Jackson Hts-Roosevelt Av', [3, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:35.196443
+['Jackson Hts-Roosevelt Av', [3, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:42.176518
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [8, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:49.186337
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:52:56.336287
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:03.089646
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:10.224133
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:17.255670
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [3, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:24.346911
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:31.295399
+['Jackson Hts-Roosevelt Av', [2, 'e', 'Jamaica Center-Parsons/Archer'], [2, 'm', 'Forest Hills-71 Av'], [7, 'e', 'Jamaica Center-Parsons/Archer']] 2021-11-26 09:53:38.351879

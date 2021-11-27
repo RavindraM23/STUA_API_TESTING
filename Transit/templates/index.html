@@ -5,17 +5,24 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script>
-	var stations = new EventSource("/stations");
+	var stations = new EventSource("/stationOne");
 	stations.onmessage = function(event) {
 		const obj = JSON.parse(event.data);
-		document.getElementById("terminus").innerHTML = obj.terminus;
-		document.getElementById("photo").src = obj.route_emblem;
-		document.getElementById("countdown").innerHTML = obj.time + " min";
+		document.getElementById("terminusOne").innerHTML = "To " + obj.terminus;
+		document.getElementById("photoOne").src = obj.route_emblem;
+		document.getElementById("countdownOne").innerHTML = obj.time + " min";
+	}
+    var stations = new EventSource("/stationTwo");
+	stations.onmessage = function(event) {
+		const obj = JSON.parse(event.data);
+		document.getElementById("terminusTwo").innerHTML = "To " + obj.terminus;
+		document.getElementById("photoTwo").src = obj.route_emblem;
+		document.getElementById("countdownTwo").innerHTML = obj.time + " min";
 	}
 	var interfaces = new EventSource("/interfaces");
 	interfaces.onmessage = function(event) {
-	        const obj = JSON.parse(event.data);
-	        document.getElementById("time").innerHTML = obj.time;
+	    const obj = JSON.parse(event.data);
+	    document.getElementById("time").innerHTML = obj.time;
 	} 
 	</script>
 </head>
@@ -23,24 +30,31 @@
 	<div class="container-fluid" style="background-color: aqua; height: 100vh;">
 	    <div class="row" style="background-color: bisque;">
                 <div class="col-sm-6">
-                    <h2 id="time" style="text-align: left;">Placeholder</h2>
+                    <h3 id="time" style="text-align: left;">Placeholder</h3>
                 </div>
                 <div class="col-sm-6">
-                    <h2 style="text-align: right;">Stuyvesant High School</h2>
+                    <h3 style="text-align: right;">Stuyvesant High School</h3>
                 </div>
             </div>
             <div class="row" style="background-color: aquamarine;">
                 <div class="col-sm-5">
-                    <div class="row" style="background-color: red;">
+                    <div class="row" style="background-color: pink;">
                         <div class="col-sm-5">
-                            <img id="photo" src="/static/emblems/a.svg" style="height: 100px; width: 100px;">
+                            <img id="photoOne" src="/static/emblems/fd.svg" style="height: 150px; width: 150px;">
                         </div>
                         <div class="col-sm-7">
-                            <h2>Testing</h2>
+                            <h1 id="countdownOne">Placeholder</h1>
+                            <h2 id="terminusOne">Placeholder</h2>
                         </div>
                     </div>
-                    <div class="row" style="background-color: yellow;">
-                        <h2 id="terminus">Testing</h2>
+                    <div class="row" style="background-color: yellowgreen;">
+                        <div class="col-sm-5">
+                            <img id="photoTwo" src="/static/emblems/fd.svg" style="height: 150px; width: 150px;">
+                        </div>
+                        <div class="col-sm-7">
+                            <h1 id="countdownTwo">Placeholder</h1>
+                            <h2 id="terminusTwo">Placeholder</h2>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-7">

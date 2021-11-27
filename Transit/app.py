@@ -45,15 +45,24 @@ def interfaces():
             time.sleep(2)
     return Response(generate(), mimetype= 'text/event-stream')
     
-@app.route('/stations')
-def stations():
+@app.route('/stationOne')
+def stationOne():
     def generate():
         value = True
         while (value == True):
-            f_file = formatting("239", "N")
+            f_file = formatting("F11", "N")
             yield "data:" + f_file + "\n\n"
             time.sleep(5)
     return Response(generate(), mimetype= 'text/event-stream')
 
+@app.route('/stationTwo')
+def stationTwo():
+    def generate():
+        value = True
+        while (value == True):
+            f_file = formatting("L17", "N")
+            yield "data:" + f_file + "\n\n"
+            time.sleep(5)
+    return Response(generate(), mimetype= 'text/event-stream')
 
 app.run() 
