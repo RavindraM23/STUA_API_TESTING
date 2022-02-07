@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response
-from stua import transit
+from backend import transit
 import json, time, datetime
 
 def formatting(arg1, arg2): 
@@ -14,7 +14,7 @@ def formatting(arg1, arg2):
     }
     f["station_id"] = arg1
     f["station_name"] = information[0]
-    f["route_id"] = information[1][1]
+    f["route_id"] = information[1][1].lower()
     f["route_emblem"] = f"/static/emblems/{information[1][1]}.svg"
     f["terminus"] = information[1][2]
     f["time"] = information[1][0]
@@ -44,13 +44,13 @@ def interfaces():
             yield "data:" + f_file + "\n\n"
             time.sleep(2)
     return Response(generate(), mimetype= 'text/event-stream')
-    
+
 @app.route('/stationOne')
 def stationOne():
     def generate():
         value = True
         while (value == True):
-            f_file = formatting("F11", "N")
+            f_file = formatting("A20", "N")
             yield "data:" + f_file + "\n\n"
             time.sleep(5)
     return Response(generate(), mimetype= 'text/event-stream')
@@ -60,7 +60,7 @@ def stationTwo():
     def generate():
         value = True
         while (value == True):
-            f_file = formatting("L17", "N")
+            f_file = formatting("A20", "S")
             yield "data:" + f_file + "\n\n"
             time.sleep(5)
     return Response(generate(), mimetype= 'text/event-stream')
