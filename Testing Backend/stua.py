@@ -5,7 +5,7 @@ import gtfs_realtime_pb2, nyct_subway_pb2
 
 API = ""
 
-class gtfs:
+class gtfsSubway:
     def __init__(self):
         self.route_id = ""
         self.terminus = ""
@@ -14,26 +14,46 @@ class gtfs:
         self.station_id = ""
         self.direction = ""
         self.time = 0
+        self.service_pattern = ""
+        self.service_description = ""
+        self.schedule = ""
 
-    def set(self, route_id, terminus_id, station_id, direction, time):
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, link):
         self.route_id = route_id
-        self.terminus = convert(terminus_id)
+        self.terminus = convertSubway(terminus_id)
         self.terminus_id = terminus_id
-        self.station = convert(station_id)
+        self.station = convertSubway(station_id)
         self.station_id = station_id
         self.direction = direction
         self.time = time
+        self.service_pattern = pattern
+        self.service_description = description
+        self.schedule = link
 
     def get(self, station, direction, responses):
         _validkey(_getAPI())
         output = _transit(station, direction, responses, _getAPI())
         self.route_id = output[1]
-        self.terminus = convert(output[2][:-1])
+        self.terminus = convertSubway(output[2][:-1])
         self.terminus_id = output[2]
-        self.station = convert(output[3][:-1])
+        self.station = convertSubway(output[3][:-1])
         self.station_id = output[3]
         self.direction = output[2][-1]
         self.time = output[0]
+        descriptions = _routes(output[1])
+        self.service_pattern = descriptions[0]
+        self.service_description = descriptions[1]
+        self.schedule = descriptions[2]
+
+class gtfsBus:
+    def __init__(self):
+        self.route_id = ""
+        self.terminus = ""
+        self.terminus_id = ""
+        self.stop = ""
+        self.stop_id = ""
+        self.time = ""
+        self.service_pattern = ""
 
 def key(string):
     global API
@@ -46,7 +66,7 @@ def _validkey(key):
     if (str(requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs", headers={'x-api-key' : key}))) != "<Response [200]>":
         raise Exception("INVALID KEY")
 
-def convert(input):
+def convertSubway(input):
     if type(input) != type(""):
         raise Exception("INVALID CLASS: This method requires a String")
     output = []
@@ -145,6 +165,13 @@ def _transit(stop, direction, responses, API):
         test.write(str(output)+ f" {datetime.datetime.now()}\n")
     return output
 
+def _routes(service):
+    with open('routes.txt','r') as csv_file:
+        csv_file = csv.reader(csv_file)
+        for row in csv_file:
+            if row[0] == service:
+                return row[3], row[4], row[6]
+
 def bustime():
     thing = "6f064d4d-ed7d-415a-9d4a-c01204897506"
     response = requests.get(f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={thing}")
@@ -166,4 +193,4 @@ def bustime():
     print(root[4][4].text)
     return 0
 
-bustime()
+#bustime()
