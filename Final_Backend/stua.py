@@ -138,6 +138,8 @@ def convertSubway(input):
 
 def _url():
     link = []
+    with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write("")
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-si')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm')
@@ -159,7 +161,7 @@ def _transitSubway(stop, direction, responses, API):
         response = requests.get(link, headers={'x-api-key' : API})
         feed.ParseFromString(response.content)
       
-        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
             test.write(str(feed))
         for entity in feed.entity:
             if entity.trip_update:
