@@ -15,3 +15,5 @@
 [6, 'Q10', '982038', '982038', 'JFK/TERMINAL 5-6', 'JFK/TERMINAL 5-6', 1, 'via Farmers Blvd / Hillside Av'] 2022-02-10 20:25:26.994867
 [6, 'Q10', '982038', '982038', 'JFK/TERMINAL 5-6', 'JFK/TERMINAL 5-6', 1, 'via Farmers Blvd / Hillside Av'] 2022-02-10 20:25:31.904801
 [6, 'Q10', '982038', '982038', 'JFK/TERMINAL 5-6', 'JFK/TERMINAL 5-6', 1, 'via Farmers Blvd / Hillside Av'] 2022-02-10 20:25:36.934457
+[0, 'Q10', '982038', '982038', 'JFK/TERMINAL 5-6', 'JFK/TERMINAL 5-6', 1, 'via Farmers Blvd / Hillside Av'] 2022-02-10 20:34:08.527644
+[1, 'Q10', '982038', '982038', 'JFK/TERMINAL 5-6', 'JFK/TERMINAL 5-6', 1, 'via Farmers Blvd / Hillside Av'] 2022-02-10 20:34:20.261385

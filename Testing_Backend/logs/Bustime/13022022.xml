@@ -1,0 +1,54 @@
+<response>
+  <version>1</version>
+  <code>200</code>
+  <currentTime>1644793140805</currentTime>
+  <text>OK</text>
+  <data class="stop">
+    <id>MTA_305110</id>
+    <lat>40.690701</lat>
+    <lon>-73.996401</lon>
+    <direction>E</direction>
+    <name>ATLANTIC AV/HENRY ST</name>
+    <code>305110</code>
+    <locationType>0</locationType>
+    <routes>
+      <route>
+        <id>MTA NYCT_B61</id>
+        <shortName>B61</shortName>
+        <longName>Park Slope - Downtown Brooklyn</longName>
+        <description>via Van Brunt St / Columbia St / 9th St</description>
+        <type>3</type>
+        <color>6CBE45</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTA NYCT</id>
+          <name>MTA New York City Transit</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>en</lang>
+          <phone>718-330-1234</phone>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+      <route>
+        <id>MTA NYCT_B63</id>
+        <shortName>B63</shortName>
+        <longName>Bay Ridge - Cobble Hill</longName>
+        <description>via 5th Av / Atlantic Av</description>
+        <type>3</type>
+        <color>006CB7</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTA NYCT</id>
+          <name>MTA New York City Transit</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>en</lang>
+          <phone>718-330-1234</phone>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+    </routes>
+    <wheelchairBoarding>UNKNOWN</wheelchairBoarding>
+  </data>
+</response>
