@@ -1,6 +1,9 @@
-import requests, csv, datetime, math
+import requests, csv, datetime, math, os
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
+
+os.chdir(os.getcwd() + r"\Testing_Backend")
+print(os.getcwd())
 
 APISubway = ""
 APIBus = ""
@@ -109,7 +112,7 @@ def convertBus(input):
     if (type(input) == type(0)):
         input = str(input)
     responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{input}.xml?key={_getAPIBus()}')
-    filenamevar = f"Testing_Backend/logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+    filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
     with open(filenamevar,"wb") as f:
         f.write(responsestop.content)
     tree = ET.parse(filenamevar)
@@ -122,7 +125,7 @@ def convertSubway(input):
     if type(input) != type(""):
         raise Exception("INVALID CLASS: This method requires a String")
     output = []
-    with open('Testing_Backend/stops.txt','r') as csv_file:
+    with open('stops.txt','r') as csv_file:
         if (len(input) == 3):
             csv_file = csv.reader(csv_file)
             for row in csv_file:
@@ -165,7 +168,7 @@ def _transitSubway(stop, direction, responses, API):
         feed.ParseFromString(response.content)
         #with open("./testing.txt","w") as f:
             #f.write(str(feed))
-        with open(f"Testing_Backend/logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
             test.write(str(feed))
         for entity in feed.entity:
             if entity.trip_update:
@@ -190,12 +193,12 @@ def _transitSubway(stop, direction, responses, API):
             times.pop(temp)
             temp = -1
         else:
-            with open('Testing_Backend/stops.txt','r') as csv_file:
+            with open('stops.txt','r') as csv_file:
                 csv_file = csv.reader(csv_file)
                 for row in csv_file:
                     if row[2] == fallback[temp][2][:-1]:
                         times[temp].append(f'{row[5]}')
-            with open('Testing_Backend/stops.txt','r') as csv_file:
+            with open('stops.txt','r') as csv_file:
                 csv_file = csv.reader(csv_file)
                 for row in csv_file:
                     if row[2] == fallback[temp][3][:-1]:
@@ -219,7 +222,7 @@ def _transitSubway(stop, direction, responses, API):
         output.append(item)
     output.append(tripids[responses-1])
     #print(output)
-    with open(f"Testing_Backend/logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(output)+ f" {datetime.datetime.now()}\n")
     return output
 
@@ -230,7 +233,7 @@ def _transitBus(stop, direction, responses, API):
     response = requests.get(f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={API}")
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open(f"Testing_Backend/logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+    with open(f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
     #with open("testing.txt","w") as f:
     #    f.write(str(feed))
@@ -253,7 +256,7 @@ def _transitBus(stop, direction, responses, API):
                 stop_id = update.stop_id
                 #print(destination)
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
-                filenamevar = f"Testing_Backend/logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+                filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
                 #print(responsestop.content)
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
@@ -264,7 +267,7 @@ def _transitBus(stop, direction, responses, API):
                     if (item[1].text == route_id):
                         service_pattern = item[3].text
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
-                filenamevar = f"Testing_Backend/logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+                filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
                 #print(responsestop.content)
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
@@ -277,14 +280,12 @@ def _transitBus(stop, direction, responses, API):
     times.sort()
     times = times[responses-1]
     #print(times)
-    with open(f"Testing_Backend/logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     return times 
 
-
-
 def _routes(service):
-    with open('Testing_Backend/routes.txt','r') as csv_file:
+    with open('routes.txt','r') as csv_file:
         csv_file = csv.reader(csv_file)
         for row in csv_file:
             if row[0] == service:
@@ -299,7 +300,7 @@ def bustime():
     #print(feed.entity)
     num = 305110
     responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{num}.xml?key={thing}')
-    filenamevar = f"Testing_Backend/logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+    filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
     #print(responsestop.content)
     with open(filenamevar,"wb") as test:
         test.write(responsestop.content)

@@ -1,4 +1,4 @@
-import requests, csv, datetime, math
+import requests, csv, datetime, math, os
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
 
