@@ -4,3 +4,14 @@
 [98, 'A', 'H11S', 'A36S', 'Euclid Av', 'Chambers St', '106550_D..S'] 2022-02-13 18:35:23.019610
 [95, 'A', 'H11S', 'A36S', 'Euclid Av', 'Chambers St', '117000_C..S'] 2022-02-13 18:37:57.578688
 [94, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '117000_C..S'] 2022-02-13 18:38:52.748993
+[93, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '117000_C..S'] 2022-02-13 18:40:26.158443
+[91, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '118050_C..S'] 2022-02-13 18:41:58.397031
+[82, 'A', 'H11S', 'A36S', 'Euclid Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:35:53.043484
+[81, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:36:51.372697
+[81, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:37:15.665971
+[81, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:37:16.157907
+[81, 'A', 'H11S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:37:28.592176
+[95, 'A', 'A65S', 'A36S', 'Ozone Park-Lefferts Blvd', 'Chambers St', '128325_C..S'] 2022-02-13 20:38:12.588023
+[94, 'A', 'A65S', 'A36S', 'Ozone Park-Lefferts Blvd', 'Chambers St', '128325_C..S'] 2022-02-13 20:38:34.710482
+[94, 'A', 'A65S', 'A36S', 'Far Rockaway-Mott Av', 'Chambers St', '128325_C..S'] 2022-02-13 20:38:54.983304
+[8, 'A', 'H11S', 'A36S', 'Ozone Park-Lefferts Blvd', 'Chambers St', '119950_A..S'] 2022-02-13 20:39:18.244751

@@ -286,4 +286,3 @@ def _routes(service):
                 return row[3], row[4], row[6]
 
 
-

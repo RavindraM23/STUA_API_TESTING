@@ -2,9 +2,6 @@ import requests, csv, datetime, math, os
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
 
-os.chdir(os.getcwd() + r"\Testing_Backend")
-print(os.getcwd())
-
 APISubway = ""
 APIBus = ""
 
@@ -132,12 +129,7 @@ def convertSubway(input):
                 if row[2] == input:
                     output.append(row[5])
         else:
-            '''
-            csv_file = csv.reader(csv_file)
-            for row in csv_file:
-                if row[5] == input:
-                    output.append(row[2])
-            '''
+   
             raise Exception("INVALID ARGUMENT")
     if (len(output) == 1):
         for i in output: return i
@@ -146,6 +138,8 @@ def convertSubway(input):
 
 def _url():
     link = []
+    with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write("")
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-si')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm')
@@ -166,9 +160,8 @@ def _transitSubway(stop, direction, responses, API):
         feed = gtfs_realtime_pb2.FeedMessage()
         response = requests.get(link, headers={'x-api-key' : API})
         feed.ParseFromString(response.content)
-        #with open("./testing.txt","w") as f:
-            #f.write(str(feed))
-        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+      
+        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
             test.write(str(feed))
         for entity in feed.entity:
             if entity.trip_update:
@@ -221,7 +214,7 @@ def _transitSubway(stop, direction, responses, API):
     for item in times:
         output.append(item)
     output.append(tripids[responses-1])
-    #print(output)
+   
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(output)+ f" {datetime.datetime.now()}\n")
     return output
@@ -235,13 +228,12 @@ def _transitBus(stop, direction, responses, API):
     feed.ParseFromString(response.content)
     with open(f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
-    #with open("testing.txt","w") as f:
-    #    f.write(str(feed))
+ 
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
-            #print(entity.trip_update.trip.direction_id)
+       
             if ((update.stop_id == stop) and (entity.trip_update.trip.direction_id == direction)):
-                #print(update)
+         
                 time = update.arrival.time
                 if (time < 0):
                     time = update.departure.time
@@ -254,10 +246,10 @@ def _transitBus(stop, direction, responses, API):
                 terminus_id = destination[-1]
                 direction = entity.trip_update.trip.direction_id
                 stop_id = update.stop_id
-                #print(destination)
+           
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
                 filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-                #print(responsestop.content)
+         
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
                 tree = ET.parse(filenamevar)
@@ -268,21 +260,23 @@ def _transitBus(stop, direction, responses, API):
                         service_pattern = item[3].text
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
                 filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-                #print(responsestop.content)
+               
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
                 tree = ET.parse(filenamevar)
                 root = tree.getroot()
                 terminus_name = root[4][4].text
-                #print(root[4])
+               
                 times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id])
-                #print(time)
+                
     times.sort()
     times = times[responses-1]
-    #print(times)
+
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     return times 
+
+
 
 def _routes(service):
     with open('routes.txt','r') as csv_file:
@@ -292,50 +286,3 @@ def _routes(service):
                 return row[3], row[4], row[6]
 
 
-def bustime():
-    thing = "6f064d4d-ed7d-415a-9d4a-c01204897506"
-    response = requests.get(f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={thing}")
-    feed = gtfs_realtime_pb2.FeedMessage()
-    feed.ParseFromString(response.content)
-    #print(feed.entity)
-    num = 305110
-    responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{num}.xml?key={thing}')
-    filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-    #print(responsestop.content)
-    with open(filenamevar,"wb") as test:
-        test.write(responsestop.content)
-    #doc = xml.dom.minidom.parse(filenamevar)
-    #print(doc.firstChild.tagName)
-    tree = ET.parse(filenamevar)
-    root = tree.getroot()
-    #print(root[4][4].text)
-    #print(root[4][7][0][3].text)
-    #print(root[4][7][0])
-    for i in root[4][7]:
-        if (i[1].text == 'B61'):
-            print(i[3].text)
-    return 0
-
-#bustime()
-
-
-def main():
-    keyBus("6f064d4d-ed7d-415a-9d4a-c01204897506")
-    keySubway("p4G33OQzU8acTdI6FbwCQ3C4bXKbmLFla5ZSDvdc")
-    newtrain = gtfsSubway()
-    newtrain.getSubway("A53","N",0)
-    print(newtrain.trip_id)
-    print(newtrain.station)
-    print(newtrain.route_id)
-    print(f"{newtrain.time} minutes")
-    new_bus = gtfsBus()
-    new_bus.getBus("982038", 1, 0)
-    print(new_bus.service_pattern)
-    print(new_bus.trip_id)
-    print(convertBus(305110))
-
-    #new_train = gtfsSubway()
-    #new_train.setSubway("E", "M01", "A25", "S", "20", "QUEENS BLVD EXP // 8 AVE LCL // VIA MYRTLE", "test")
-    #print(f"There is a {new_train.terminus} bound {new_train.route_id} train approaching {new_train.station} in {new_train.time} minutes")
-    
-main()
