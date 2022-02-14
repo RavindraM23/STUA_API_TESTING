@@ -286,3 +286,4 @@ def _routes(service):
                 return row[3], row[4], row[6]
 
 
+print(convertBus(505130))

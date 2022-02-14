@@ -1,0 +1,36 @@
+<response>
+  <version>1</version>
+  <code>200</code>
+  <currentTime>1644803910815</currentTime>
+  <text>OK</text>
+  <data class="stop">
+    <id>MTA_505130</id>
+    <lat>40.792177</lat>
+    <lon>-73.807337</lon>
+    <direction>S</direction>
+    <name>154 ST/11 AV</name>
+    <code>505130</code>
+    <locationType>0</locationType>
+    <routes>
+      <route>
+        <id>MTA NYCT_Q15</id>
+        <shortName>Q15</shortName>
+        <longName>Flushing - Beechhurst</longName>
+        <description>via 150th St / 154th St</description>
+        <type>3</type>
+        <color>FAA61A</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTA NYCT</id>
+          <name>MTA New York City Transit</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>en</lang>
+          <phone>718-330-1234</phone>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+    </routes>
+    <wheelchairBoarding>UNKNOWN</wheelchairBoarding>
+  </data>
+</response>

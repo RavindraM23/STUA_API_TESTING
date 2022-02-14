@@ -4,6 +4,8 @@ import gtfs_realtime_pb2, nyct_subway_pb2
 
 APISubway = ""
 APIBus = ""
+#6f064d4d-ed7d-415a-9d4a-c01204897506
+#p4G33OQzU8acTdI6FbwCQ3C4bXKbmLFla5ZSDvdc
 
 class gtfsSubway:
     def __init__(self):
@@ -70,11 +72,11 @@ class gtfsBus:
         self.direction = output[6]
         self.trip_id = output[8]
 
-    def setBus(self, route_id, terminus, terminus_id, stop, stop_id, time, service_pattern, direction, trip_id):
+    def setBus(self, route_id, terminus_id, stop_id, time, service_pattern, direction, trip_id):
         self.route_id = route_id
-        self.terminus = terminus
+        self.terminus = convertBus(terminus_id)
         self.terminus_id = terminus_id
-        self.stop = stop
+        self.stop = convertBus(stop_id)
         self.stop_id = stop_id
         self.time = time
         self.service_pattern = service_pattern
