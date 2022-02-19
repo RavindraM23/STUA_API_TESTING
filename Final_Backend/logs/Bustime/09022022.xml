@@ -1,0 +1,54 @@
+<response>
+  <version>1</version>
+  <code>200</code>
+  <currentTime>1644455279637</currentTime>
+  <text>OK</text>
+  <data class="stop">
+    <id>MTA_550320</id>
+    <lat>40.686058</lat>
+    <lon>-73.824177</lon>
+    <direction>SE</direction>
+    <name>LEFFERTS BL /LIBERTY AV</name>
+    <code>550320</code>
+    <locationType>0</locationType>
+    <routes>
+      <route>
+        <id>MTABC_Q10</id>
+        <shortName>Q10</shortName>
+        <longName>Kew Gardens - Jfk Airport</longName>
+        <description>Via Lefferts Blvd</description>
+        <type>3</type>
+        <url>http://web.mta.info/busco/schedules/q010cur.pdf</url>
+        <color>FAA61A</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTABC</id>
+          <name>MTA Bus Company</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>EN</lang>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+      <route>
+        <id>MTABC_QM18</id>
+        <shortName>QM18</shortName>
+        <longName>South Ozone Park - Midtown Express</longName>
+        <description>Via Lefferts Blvd / Queens Blvd</description>
+        <type>3</type>
+        <url>http://web.mta.info/busco/schedules/qm18cur.pdf</url>
+        <color>00933C</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTABC</id>
+          <name>MTA Bus Company</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>EN</lang>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+    </routes>
+    <wheelchairBoarding>UNKNOWN</wheelchairBoarding>
+  </data>
+</response>

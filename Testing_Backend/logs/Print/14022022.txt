@@ -1,0 +1,25 @@
+[61, 'SF', 'D26S', 'S03S', 'Prospect Park', 'Park Pl', '130950_FS..S'] 2022-02-14 20:50:32.172818
+[57, 'SF', 'D26S', 'S03S', 'Prospect Park', 'Park Pl', '130950_FS..S'] 2022-02-14 20:54:13.727732
+[56, 'SF', 'D26S', 'S03S', 'Prospect Park', 'Park Pl', '130950_FS..S'] 2022-02-14 20:55:02.901779
+[59, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 20:55:30.146678
+[58, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 20:56:10.672830
+[28, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126600_SI..S'] 2022-02-14 20:56:28.733161
+[19, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126600_SI..S'] 2022-02-14 21:05:03.674528
+[19, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126600_SI..S'] 2022-02-14 21:05:36.772041
+[10, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126616_SI..S'] 2022-02-14 21:14:18.536674
+[9, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126616_SI..S'] 2022-02-14 21:15:03.992577
+[8, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126616_SI..S'] 2022-02-14 21:16:10.262933
+[4, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '126616_SI..S'] 2022-02-14 21:19:47.475171
+[26, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:28:48.352956
+[24, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:30:59.123147
+[23, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:31:51.749103
+[22, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:32:29.045625
+[20, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:34:12.439016
+[19, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:35:09.151103
+[19, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:35:28.069596
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:36:22.418182
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:36:56.573057
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:37:39.693235
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:38:06.257575
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:38:48.806917
+[18, 'SI', 'S09S', 'S22S', 'Tottenville', 'New Dorp', '129600_SI..S'] 2022-02-14 21:39:17.603292

@@ -1,11 +1,28 @@
-import requests, csv, datetime, math, os
+import requests, csv, datetime, math, os, json
+from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
 
 APISubway = ""
 APIBus = ""
+APILIRR = ""
+APIMNR = "" 
 
-class gtfsSubway:
+class gtfs(ABC):
+
+    @abstractmethod
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def set(self):
+        pass
+
+    @abstractmethod
+    def get(self):
+        pass
+
+class gtfsSubway(gtfs):
     def __init__(self):
         self.route_id = ""
         self.terminus = ""
@@ -18,7 +35,7 @@ class gtfsSubway:
         self.service_description = ""
         self.trip_id = ""
 
-    def setSubway(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id):
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id):
         self.route_id = route_id
         self.terminus = convertSubway(terminus_id)
         self.terminus_id = terminus_id
@@ -30,22 +47,35 @@ class gtfsSubway:
         self.service_description = description
         self.trip_id = trip_id
 
-    def getSubway(self, station, direction, responses):
+    def get(self, station, direction, responses):
         _validkeySubway(_getAPISubway())
         output = _transitSubway(station, direction, responses, _getAPISubway())
-        self.route_id = output[1]
-        self.terminus = convertSubway(output[2][:-1])
-        self.terminus_id = output[2]
-        self.station = convertSubway(output[3][:-1])
-        self.station_id = output[3]
-        self.direction = output[2][-1]
-        self.time = output[0]
-        descriptions = _routes(output[1])
-        self.service_pattern = descriptions[0]
-        self.service_description = descriptions[1]
-        self.trip_id = output[6]
+        if (output == "NO TRAINS"):
+            self.route_id = "NO TRAINS"
+            self.terminus = "NO TRAINS"
+            self.terminus_id = "NO TRAINS"
+            self.station = convertSubway(station)
+            self.station_id = station
+            self.direction = direction
+            self.time = "NO TRAINS"
+            descriptions = "NO TRAINS"
+            self.service_pattern = "NO TRAINS"
+            self.service_description = "NO TRAINS"
+            self.trip_id = "NO TRAINS"
+        else:
+            self.route_id = output[1]
+            self.terminus = convertSubway(output[2][:-1])
+            self.terminus_id = output[2]
+            self.station = convertSubway(output[3][:-1])
+            self.station_id = output[3]
+            self.direction = output[2][-1]
+            self.time = output[0]
+            descriptions = _routes(output[1])
+            self.service_pattern = descriptions[0]
+            self.service_description = descriptions[1]
+            self.trip_id = output[6]
 
-class gtfsBus:
+class gtfsBus(gtfs):
     def __init__(self):
         self.route_id = ""
         self.terminus = ""
@@ -57,28 +87,157 @@ class gtfsBus:
         self.direction = 0
         self.trip_id = ""
 
-    def getBus(self, stop, direction, responses):
+    def get(self, stop, direction, responses):
         _validkeyBus(_getAPIBus())
         output = _transitBus(stop, direction, responses, _getAPIBus())
-        self.route_id = output[1]
-        self.terminus = output[5]
-        self.terminus_id = output[2]
-        self.stop = output[4]
-        self.stop_id = output[3]
-        self.time = output[0]
-        self.service_pattern = output[7]
-        self.direction = output[6]
-        self.trip_id = output[8]
+        if (output == "NO BUSES"):
+            self.route_id = "NO BUSES"
+            self.terminus = "NO BUSES"
+            self.terminus_id = "NO BUSES"
+            self.stop = stop
+            self.stop_id = convertBus(stop)
+            self.time = "NO BUSES"
+            self.service_pattern = "NO BUSES"
+            self.direction = direction
+            self.trip_id = "NO BUSES"
+        else:
+            self.route_id = output[1]
+            self.terminus = output[5]
+            self.terminus_id = output[2]
+            self.stop = output[4]
+            self.stop_id = output[3]
+            self.time = output[0]
+            self.service_pattern = output[7]
+            self.direction = output[6]
+            self.trip_id = output[8]
 
-    def setBus(self, route_id, terminus, terminus_id, stop, stop_id, time, service_pattern, direction, trip_id):
+    def set(self, route_id, terminus_id, stop_id, time, service_pattern, direction, trip_id):
         self.route_id = route_id
-        self.terminus = terminus
+        self.terminus = convertBus(terminus_id)
         self.terminus_id = terminus_id
-        self.stop = stop
+        self.stop = convertBus(stop_id)
         self.stop_id = stop_id
         self.time = time
         self.service_pattern = service_pattern
         self.direction = direction
+        self.trip_id = trip_id
+
+class gtfsLIRR(gtfs):
+    def __init__(self):
+        self.route_id = ""
+        self.terminus = ""
+        self.terminus_id = ""
+        self.station = "" 
+        self.station_id = ""
+        self.direction = ""
+        self.time = 0
+        self.service_pattern = ""
+        self.service_description = ""
+        self.station_id_list = ""
+        self.station_name_list = ""
+        self.trip_id = ""
+
+    def get(self, stop, direction, responses):
+        _validkeySubway(_getAPILIRR())
+        output = _transitLIRR(stop, direction, responses, _getAPILIRR())
+        if (output == "NO TRAINS"):
+            self.route_id = "NO TRAINS"
+            self.terminus = "NO TRAINS"
+            self.terminus_id = "NO TRAINS"
+            self.station = convertLIRR(stop)
+            self.station_id = stop
+            self.time = "NO TRAINS"
+            self.service_description = "NO TRAINS"
+            self.service_pattern = "NO TRAINS"
+            self.station_id_list = "NO TRAINS"
+            self.station_name_list = "NO TRAINS"
+            self.direction = direction
+            self.trip_id = "NO TRAINS"
+        else:
+            self.route_id = output[1]
+            self.terminus = convertLIRR(output[2])
+            self.terminus_id = output[2]
+            self.station = convertLIRR(output[3])
+            self.station_id = output[3]
+            self.time = output[0]
+            self.service_description = f"{timeconvert(output[0])} train to " + convertLIRR(output[2])
+            self.service_pattern = convertLIRR(output[2])
+            self.station_id_list = output[6]
+            self.station_name_list = output[7]
+            self.direction = output[4]
+            self.trip_id = output[5]
+
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list):
+        self.route_id = route_id
+        self.terminus = convertLIRR(terminus_id)
+        self.terminus_id = terminus_id
+        self.station = convertLIRR(station_id)
+        self.station_id = station_id
+        self.direction = direction
+        self.time = time
+        self.service_pattern = pattern
+        self.service_description = description
+        self.station_id_list = station_id_list
+        self.station_name_list = [convertLIRR(i) for i in station_id_list]
+        self.trip_id = trip_id
+
+class gtfsMNR(gtfs):
+    def __init__(self):
+        self.route_id = ""
+        self.terminus = ""
+        self.terminus_id = ""
+        self.station = "" 
+        self.station_id = ""
+        self.direction = ""
+        self.time = 0
+        self.service_pattern = ""
+        self.service_description = ""
+        self.station_id_list = ""
+        self.station_name_list = ""
+        self.trip_id = ""
+
+    def get(self, stop, direction, responses):
+        _validkeySubway(_getAPIMNR())
+        output = _transitMNR(stop, direction, responses, _getAPIMNR())
+        if (output == "NO TRAINS"):
+            self.route_id = "NO TRAINS"
+            self.terminus = "NO TRAINS"
+            self.terminus_id = "NO TRAINS"
+            self.station = convertMNR(stop)
+            self.station_id = stop
+            self.time = "NO TRAINS"
+            self.service_description = "NO TRAINS"
+            self.service_pattern = "NO TRAINS"
+            self.station_id_list = "NO TRAINS"
+            self.station_name_list = "NO TRAINS"
+            self.direction = direction
+            self.trip_id = "NO TRAINS"
+        else:
+            self.route_id = output[1]
+            self.terminus = convertMNR(output[2])
+            self.terminus_id = output[2]
+            self.station = convertMNR(output[3])
+            self.station_id = output[3]
+            self.time = output[0]
+            self.service_description = f"{timeconvert(output[0])} train to " + convertMNR(output[2])
+            self.service_pattern = convertMNR(output[2])
+            self.station_id_list = output[6]
+            self.station_name_list = output[7]
+            self.direction = output[4]
+            self.trip_id = output[5]
+
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list):
+        self.route_id = route_id
+        self.terminus = convertMNR(terminus_id)
+        self.terminus_id = terminus_id
+        self.station = convertMNR(station_id)
+        self.station_id = station_id
+        self.direction = direction
+        self.time = time
+        self.service_pattern = pattern
+        self.service_description = description
+        self.station_id_list = station_id_list
+        self.station_name_list = [convertMNR(i) for i in station_id_list]
         self.trip_id = trip_id
 
 def keySubway(string):
@@ -89,11 +248,29 @@ def keyBus(string):
     global APIBus
     APIBus = string 
 
+def keyLIRR(string):
+    global APILIRR
+    APILIRR = string 
+
+def keyMNR(string):
+    global APIMNR
+    APIMNR = string 
+
 def _getAPISubway():
     return APISubway
 
 def _getAPIBus():
     return APIBus 
+
+def _getAPILIRR():
+    return APILIRR
+
+def _getAPIMNR():
+    return APIMNR
+
+def timeconvert(input):
+    out = datetime.datetime.now() + datetime.timedelta(minutes=input) 
+    return out.strftime('%H:%M')
 
 def _validkeySubway(key):
     if (str(requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs", headers={'x-api-key' : key}))) != "<Response [200]>":
@@ -116,7 +293,6 @@ def convertBus(input):
     root = tree.getroot()
     stop_name = root[4][4].text
     return stop_name
-    
 
 def convertSubway(input):
     if type(input) != type(""):
@@ -135,6 +311,37 @@ def convertSubway(input):
         for i in output: return i
     else:
         return output
+
+def convertLIRR(input):
+    output = ""
+    if type(input) != type(""):
+        raise Exception("INVALID CLASS: This method requires a String")
+    if (type(input) == type(0)):
+        input = str(input)
+    #print(input)
+    f = open("lirr_gtfs.json")
+    data = json.load(f)
+    #print(data["gtfs"]["stops"])
+    for i in data["gtfs"]["stops"]:
+        if input == i["stop_id"]:
+            output = i["stop_name"]
+    #print(output)
+    return output 
+
+def convertMNR(input):
+    output = ""
+    if type(input) != type(""):
+        raise Exception("INVALID CLASS: This method requires a String")
+    if (type(input) == type(0)):
+        input = str(input)
+    #print(input)
+    with open('stations.txt','r') as csv_file:
+        csv_file = csv.reader(csv_file)
+        for row in csv_file:
+            if row[0] == input:
+               output = row[2]
+    #print(output)
+    return output 
 
 def _url():
     link = []
@@ -209,7 +416,11 @@ def _transitSubway(stop, direction, responses, API):
             times[temp][1] = times[temp][1].upper()
         temp += 1
     
-    times = times[responses-1]
+    try:
+        times = [times[responses-1]]
+    except:
+        return "NO TRAINS"
+
     output = []
     for item in times:
         output.append(item)
@@ -232,13 +443,15 @@ def _transitBus(stop, direction, responses, API):
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
        
-            if ((update.stop_id == stop) and (entity.trip_update.trip.direction_id == direction)):
+            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
          
                 time = update.arrival.time
                 if (time < 0):
                     time = update.departure.time
                 time = datetime.datetime.fromtimestamp(time)
                 time = math.trunc(((time - current_time).total_seconds()) / 60)
+                if (time < 0):
+                    continue 
                 trip_id = entity.trip_update.trip.trip_id
                 route_id = entity.trip_update.trip.route_id
                 for update in entity.trip_update.stop_time_update:
@@ -270,13 +483,119 @@ def _transitBus(stop, direction, responses, API):
                 times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id])
                 
     times.sort()
-    times = times[responses-1]
+    try:
+        times = times[responses-1]
+    except:
+        return "NO BUSES"
 
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     return times 
 
+def  _transitLIRR(stop, direction, responses, API):
+    current_time = datetime.datetime.now()
+    times = []
+    destination = []
+    #print(API)
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/lirr%2Fgtfs-lirr", headers={'x-api-key' : API})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open(f"logs/LIRR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    for entity in feed.entity:
+        for update in entity.trip_update.stop_time_update:
+            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
+                station_id = update.stop_id
+                time = update.arrival.time
+                if (time < 0):
+                    time = update.departure.time
+                time = datetime.datetime.fromtimestamp(time)
+                time = math.trunc(((time - current_time).total_seconds()) / 60)
+                #print(time)
+                if (time < 0):
+                    continue 
+                trip_id = entity.trip_update.trip.trip_id
+                route_id = entity.trip_update.trip.route_id
+                direction = entity.trip_update.trip.direction_id
+                station_id_list = []
+                for update in entity.trip_update.stop_time_update:
+                    destination.append(update.stop_id)
+                    station_id_list.append(update.stop_id)
+                #print(service_description)
+                station_stop_list = [convertLIRR(i) for i in station_id_list]
+                terminus_id = destination[-1]
+            
+                #print(stop)
 
+                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list])
+                #print(data["gtfs"]["stops"])
+                #for i in data["gtfs"]["stops"]:
+                #print(i["stop_id"] + " " + i["stop_name"])
+    times.sort()
+    #times = []
+    #print(times)
+    try:
+        times = times[responses-1]
+    except:
+        return "NO TRAINS"
+        #print(times)
+
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+        test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    return times 
+
+def  _transitMNR(stop, direction, responses, API):
+    current_time = datetime.datetime.now()
+    times = []
+    destination = []
+    #print(API)
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-mnr", headers={'x-api-key' : API})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open(f"logs/MNR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    for entity in feed.entity:
+        for update in entity.trip_update.stop_time_update:
+            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
+                station_id = update.stop_id
+                time = update.arrival.time
+                if (time < 0):
+                    time = update.departure.time
+                time = datetime.datetime.fromtimestamp(time)
+                time = math.trunc(((time - current_time).total_seconds()) / 60)
+                #print(time)
+                if (time < 0):
+                    continue 
+                trip_id = entity.trip_update.trip.trip_id
+                route_id = entity.trip_update.trip.route_id
+                direction = entity.trip_update.trip.direction_id
+                station_id_list = []
+                for update in entity.trip_update.stop_time_update:
+                    destination.append(update.stop_id)
+                    station_id_list.append(update.stop_id)
+                #print(service_description)
+                station_stop_list = [convertMNR(i) for i in station_id_list]
+                terminus_id = destination[-1]
+            
+                #print(stop)
+
+                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list])
+                #print(data["gtfs"]["stops"])
+                #for i in data["gtfs"]["stops"]:
+                #print(i["stop_id"] + " " + i["stop_name"])
+    times.sort()
+    #times = []
+    #print(times)
+    try:
+        times = times[responses-1]
+    except:
+        return "NO TRAINS"
+        #print(times)
+
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+        test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    return times 
+    
 
 def _routes(service):
     with open('routes.txt','r') as csv_file:
@@ -286,4 +605,3 @@ def _routes(service):
                 return row[3], row[4], row[6]
 
 
-print(convertBus(505130))
