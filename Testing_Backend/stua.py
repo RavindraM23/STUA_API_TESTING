@@ -52,6 +52,7 @@ class gtfsSubway(gtfs):
     def get(self, station, direction, responses):
         _validkeySubway(_getAPISubway())
         output = _transitSubway(station, direction, responses, _getAPISubway())
+        #print(output)
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
             self.terminus = "NO TRAINS"
@@ -419,7 +420,7 @@ def _transitSubway(stop, direction, responses, API):
         temp += 1
     
     try:
-        times = [times[responses-1]]
+        times = times[responses-1]
     except:
         return "NO TRAINS"
 
@@ -606,16 +607,3 @@ def _routes(service):
             if row[0] == service:
                 return row[3], row[4], row[6]
 
-def main():
-    keyLIRR("p4G33OQzU8acTdI6FbwCQ3C4bXKbmLFla5ZSDvdc")
-    keySubway("p4G33OQzU8acTdI6FbwCQ3C4bXKbmLFla5ZSDvdc")
-    keyMNR("p4G33OQzU8acTdI6FbwCQ3C4bXKbmLFla5ZSDvdc")
-    
-    #response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-mnr", headers={'x-api-key' : _getAPIMNR()})
-    #feed = gtfs_realtime_pb2.FeedMessage()
-    #feed.ParseFromString(response.content)
-    #with open(f"logs/MNR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
-    #    test.write(str(feed)+ f" {datetime.datetime.now()}\n")
-
-
-main()

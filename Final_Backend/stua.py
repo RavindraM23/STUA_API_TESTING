@@ -417,7 +417,7 @@ def _transitSubway(stop, direction, responses, API):
         temp += 1
     
     try:
-        times = [times[responses-1]]
+        times = times[responses-1]
     except:
         return "NO TRAINS"
 
