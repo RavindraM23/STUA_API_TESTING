@@ -69,14 +69,14 @@ class gtfsSubway(gtfs):
             self.route_id = output[1]
             self.terminus = convertSubway(output[2][:-1])
             self.terminus_id = output[2]
-            self.station = convertSubway(output[3][:-1])
+            self.station = convertSubway(output[3])
             self.station_id = output[3]
-            self.direction = output[2][-1]
+            self.direction = output[4]
             self.time = output[0]
             descriptions = _routes(output[1])
             self.service_pattern = descriptions[0]
             self.service_description = descriptions[1]
-            self.trip_id = output[6]
+            self.trip_id = output[5]
 
 class gtfsBus(gtfs):
     def __init__(self):
@@ -362,76 +362,53 @@ def _url():
 
 def _transitSubway(stop, direction, responses, API):
     times = []
-    tripids = []
+    destination = []
     current_time = datetime.datetime.now()
     links = _url()
     for link in links:
-        destination = []
-        feed = gtfs_realtime_pb2.FeedMessage()
         response = requests.get(link, headers={'x-api-key' : API})
+        feed = gtfs_realtime_pb2.FeedMessage()
         feed.ParseFromString(response.content)
-      
-        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
-            test.write(str(feed))
+        with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+            test.write(str(feed)+ f" {datetime.datetime.now()}\n")
         for entity in feed.entity:
-            if entity.trip_update:
-                for update in entity.trip_update.stop_time_update:
-                    if update.stop_id == (stop+direction):
-                        time = update.arrival.time
-                        if time <= 0:
-                                time = update.departure.time
-                        time = datetime.datetime.fromtimestamp(time)
-                        time = math.trunc(((time - current_time).total_seconds()) / 60)
-                        for update in entity.trip_update.stop_time_update:
-                                destination.append(update.stop_id)
-                        tripids.append(entity.trip_update.trip.trip_id)
+            for update in entity.trip_update.stop_time_update:
+                if (update.stop_id == stop+direction):
+                    station_id = update.stop_id[:-1]
+                    direction = update.stop_id[-1]
+                    time = update.arrival.time
+                    if (time < 0):
+                        time = update.departure.time
+                    time = datetime.datetime.fromtimestamp(time)
+                    time = math.trunc(((time - current_time).total_seconds()) / 60)
+                    #print(time)
+                    if (time < 0):
+                        continue 
+                    trip_id = entity.trip_update.trip.trip_id
+                    route_id = entity.trip_update.trip.route_id
+                    for update in entity.trip_update.stop_time_update:
+                        destination.append(update.stop_id)
+                    #print(service_description)
+                    terminus_id = destination[-1]
                 
-                        times.append([time, entity.trip_update.trip.route_id, destination[-1], stop+direction])
-     
-    times.sort()
-    fallback = times.copy()
-    temp = 0
-    while (temp <= (len(times) - 1)):
-        if (times[temp][0] < 1):
-            times.pop(temp)
-            temp = -1
-        else:
-            with open('stops.txt','r') as csv_file:
-                csv_file = csv.reader(csv_file)
-                for row in csv_file:
-                    if row[2] == fallback[temp][2][:-1]:
-                        times[temp].append(f'{row[5]}')
-            with open('stops.txt','r') as csv_file:
-                csv_file = csv.reader(csv_file)
-                for row in csv_file:
-                    if row[2] == fallback[temp][3][:-1]:
-                        times[temp].append(f'{row[5]}')
+                    #print(stop)
 
-        if (times[temp][1] == "5X"):
-            times[temp][1] = "5"
-        elif (times[temp][1] == "H"):
-            times[temp][1] = "SR"
-        elif (times[temp][1] == "FS"):
-            times[temp][1] = "SF"
-        elif (times[temp][1] == "GS"):
-            times[temp][1] = "S"
-        else:
-            times[temp][1] = times[temp][1].upper()
-        temp += 1
-    
+                    times.append([time, route_id, terminus_id, station_id, direction, trip_id])
+                    #print(data["gtfs"]["stops"])
+                    #for i in data["gtfs"]["stops"]:
+                    #print(i["stop_id"] + " " + i["stop_name"])
+    times.sort()
+    #times = []
+    #print(times)
     try:
         times = times[responses-1]
     except:
         return "NO TRAINS"
+        #print(times)
 
-    output = []
-    for item in times:
-        output.append(item)
-    output.append(tripids[responses-1])
-   
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
-        test.write(str(output)+ f" {datetime.datetime.now()}\n")
-    return output
+        test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    return times
 
 def _transitBus(stop, direction, responses, API):
     current_time = datetime.datetime.now()
