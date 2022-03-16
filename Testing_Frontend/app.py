@@ -9,6 +9,7 @@ cycle = (("M21", "S"), ("640", "S"), ("137", "S"), ("A36", "S"))
 def formatting(arg1, arg2):
     f = {
         "station": "",
+        "display":"",
         "train1": {
             "route_id": "",
             "terminus": "",
@@ -67,6 +68,32 @@ def formatting(arg1, arg2):
         information = stua.gtfsSubway()
         information.get(arg1, arg2,integer)
         f["station"] = stua.convertSubway(arg1) + f" ({arg2})"
+        alerts = stua.alertsSubway()
+
+        if alerts == []:
+            endalert = ""
+        else:
+            outalert = ""
+            endalert = ""
+            for i in alerts:
+                outalert += f"{i}; "
+                endalert += f"{i}; "
+            i = 0
+            preint = 0
+            line = ""
+            
+            while (i < len(outalert)):
+                if (outalert[i] == "["):
+                    preint = i
+                if (outalert[i] == "]"):
+                    for v in range(preint, i+1):
+                        line += outalert[v]
+                    endalert = endalert.replace(line, f'<img src="/static/emblems/{(line[1:-1]).lower()}.svg" style="height: 5vh; width: 5vw;">')
+                    #print(endalert)
+                line = ""
+                i+=1
+
+        f["display"] = endalert
         f[f"train{integer}"]["route_id"] = information.route_id
         f[f"train{integer}"]["terminus"] = information.terminus
         f[f"train{integer}"]["terminus_id"] = information.terminus_id
@@ -128,4 +155,4 @@ def info():
             time.sleep(5)
     return Response(generate(), mimetype= 'text/event-stream')
 
-app.run() 
+app.run(threaded=True) 

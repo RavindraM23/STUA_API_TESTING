@@ -8,6 +8,7 @@
 	var stations = new EventSource("/info");
 	stations.onmessage = function(event) {
 		const obj = JSON.parse(event.data); 
+        document.getElementById("still").innerHTML = obj.station;
 		document.getElementById("terminusOne").innerHTML = "To " + obj.train1.terminus;
 		document.getElementById("photoOne").src = obj.train1.route_emblem;
 		document.getElementById("countdownOne").innerHTML = obj.train1.time + " min";
@@ -20,18 +21,7 @@
         document.getElementById("terminusFour").innerHTML = "To " + obj.train4.terminus;
 		document.getElementById("photoFour").src = obj.train4.route_emblem;
 		document.getElementById("countdownFour").innerHTML = obj.train4.time + " min";
-        console.log((obj.station).length);
-        if ((obj.station).length >= 5) {
-            console.log("here in scroll")
-            var scroll = document.getElementById("scroll");
-            scroll.style.display = "block"; 
-            document.getElementById("scroll").innerHTML = obj.station;
-        } else {
-            console.log("here in still")
-            var still = document.getElementById("still");
-            still.style.display = "block";
-            document.getElementById("still").innerHTML = obj.station;
-        }
+        document.getElementById("feeder").innerHTML = obj.display; 
     }
 	var interfaces = new EventSource("/interfaces");
 	interfaces.onmessage = function(event) {
@@ -41,8 +31,8 @@
 	</script>
 </head>
 <body>
-	<div class="container-fluid" style="background-color: aqua; height: 100vh;">
-	    <div class="row" style="background-color: bisque; height: 9vh">
+	<div class="container-fluid" style="height: 100vh;">
+	    <div class="row" style="height: 9vh">
             <div class="col-sm-6">
                 <h3 id="time" style="text-align: left; font-size: 2vw;">Placeholder</h3>
             </div>
@@ -50,25 +40,24 @@
                 <h3 style="text-align: right; font-size: 2vw;">Stuyvesant High School</h3>
             </div>
         </div>
-        <div class="row" style="background-color: aquamarine;">
+        <div class="row">
             <div class="col-sm-5">
-                <div class="row" style="background-color: lightpink; height: 16.4vh; display: flex; align-items: center;">
+                <div class="row" style="height: 16.4vh; display: flex; align-items: center;">
                     <div class="col-sm-12">
-                        <marquee class="display-4" id="scroll" style="display: none; font-size: 4vw; text-align: center;" behavior="alternate">Placeholder</marquee>
-                        <h1 class="display-4" id="still" style="display: none; font-size: 4vw; text-align: center;">Placeholder</h1>
+                        <h1 class="display-4" id="still" style="font-size: 4vw; text-align: center;">Placeholder</h1>
                     
                     </div>
                 </div>
-                <div class="row" style="background-color: lightgoldenrodyellow; height: 16.4vh;">
+                <div class="row" style="height: 16.4vh;">
                     <div class="col-sm-5">
-                        <div class="row" style="background-color: blueviolet;">
+                        <div class="row">
                             <div class="col-sm-12">
                                 <img id="photoOne" src="/static/emblems/fd.svg" style="height: 16.4vh; width: 16.4vw;">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-7">
-                        <div class="row" style="background-color: gold; height: 16.4vh; display: flex; align-items: center;">
+                        <div class="row" style="height: 16.4vh; display: flex; align-items: center;">
                             <div class="col-sm-12">
                                 <h1 id="countdownOne" style="font-size: 2.5vw;">Placeholder</h1>
                                 <h2 id="terminusOne" style="font-size: 2vw;">Placeholder</h2>
@@ -76,16 +65,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="background-color: lightgoldenrodyellow; height: 16.4vh;">
+                <div class="row" style="height: 16.4vh;">
                     <div class="col-sm-5">
-                        <div class="row" style="background-color: blueviolet;">
+                        <div class="row">
                             <div class="col-sm-12">
                                 <img id="photoTwo" src="/static/emblems/fd.svg" style="height: 16.4vh; width: 16.4vw;">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-7">
-                        <div class="row" style="background-color: gold; height: 16.4vh; display: flex; align-items: center;">
+                        <div class="row" style="height: 16.4vh; display: flex; align-items: center;">
                             <div class="col-sm-12">
                                 <h1 id="countdownTwo" style="font-size: 2.5vw;">Placeholder</h1>
                                 <h2 id="terminusTwo" style="font-size: 2vw;">Placeholder</h2>
@@ -93,16 +82,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="background-color: lightgoldenrodyellow; height: 16.4vh;">
+                <div class="row" style="height: 16.4vh;">
                     <div class="col-sm-5">
-                        <div class="row" style="background-color: blueviolet;">
+                        <div class="row">
                             <div class="col-sm-12">
                                 <img id="photoThree" src="/static/emblems/fd.svg" style="height: 16.4vh; width: 16.4vw;">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-7">
-                        <div class="row" style="background-color: gold; height: 16.4vh; display: flex; align-items: center;">
+                        <div class="row" style="height: 16.4vh; display: flex; align-items: center;">
                             <div class="col-sm-12">
                                 <h1 id="countdownThree" style="font-size: 2.5vw;">Placeholder</h1>
                                 <h2 id="terminusThree" style="font-size: 2vw;">Placeholder</h2>
@@ -110,16 +99,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="background-color: lightgoldenrodyellow; height: 16.4vh;">
+                <div class="row" style="height: 16.4vh;">
                     <div class="col-sm-5">
-                        <div class="row" style="background-color: blueviolet;">
+                        <div class="row">
                             <div class="col-sm-12">
                                 <img id="photoFour" src="/static/emblems/fd.svg" style="height: 16.4vh; width: 16.4vw;">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-7">
-                        <div class="row" style="background-color: gold; height: 16.4vh; display: flex; align-items: center;">
+                        <div class="row" style="height: 16.4vh; display: flex; align-items: center;">
                             <div class="col-sm-12">
                                 <h1 id="countdownFour" style="font-size: 2.5vw;">Placeholder</h1>
                                 <h2 id="terminusFour" style="font-size: 2vw;">Placeholder</h2>
@@ -132,12 +121,9 @@
                 <h2>Testing</h2>
             </div>
         </div>
-        <div class="row" style="background-color: bisque; height: 9vh">
-            <div class="col-sm-6">
-                <h3 id="time" style="text-align: left; font-size: 2vw;">Placeholder</h3>
-            </div>
-            <div class="col-sm-6">
-                <h3 style="text-align: right; font-size: 2vw;">Stuyvesant High School</h3>
+        <div class="row" style="background-color: black; height: 9vh; display: flex; align-items: center;">
+            <div class="col-sm-12">
+                <marquee id="feeder" style="text-align: left; font-size: 2vw; color: white;">Placeholder</marquee>
             </div>
         </div>
 	</div>

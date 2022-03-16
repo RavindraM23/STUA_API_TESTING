@@ -1,4 +1,4 @@
-import requests, csv, datetime, math, os, json
+import requests, csv, datetime, math, os, json, calendar
 from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
@@ -583,4 +583,21 @@ def _routes(service):
         for row in csv_file:
             if row[0] == service:
                 return row[3], row[4], row[6]
+
+def alertsSubway():
+    alerts = []
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts", headers={'x-api-key' : _getAPISubway()})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open("logs/NYCT_GTFS/alerts.txt","w") as f:
+        f.write(str(feed))
+    for entity in feed.entity:
+        for start in entity.alert.active_period:
+            if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
+                if (entity.alert.header_text.translation):
+                    for update in entity.alert.header_text.translation:
+                        if update.language == "en-html":
+                            alerts.append(entity.alert.header_text.translation[0].text)
+    return alerts 
+
 
