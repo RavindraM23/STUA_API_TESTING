@@ -1,0 +1,36 @@
+<response>
+  <version>1</version>
+  <code>200</code>
+  <currentTime>1651929522472</currentTime>
+  <text>OK</text>
+  <data class="stop">
+    <id>MTA_553240</id>
+    <lat>40.672455</lat>
+    <lon>-73.820477</lon>
+    <direction>W</direction>
+    <name>133 AV/ LEFFERTS BL</name>
+    <code>553240</code>
+    <locationType>0</locationType>
+    <routes>
+      <route>
+        <id>MTABC_Q37</id>
+        <shortName>Q37</shortName>
+        <longName>Kew Gardens - South Ozone Park</longName>
+        <description>Via 135Th Av / 111St St / Park Ln South</description>
+        <type>3</type>
+        <url>http://web.mta.info/busco/schedules/q037cur.pdf</url>
+        <color>00AEEF</color>
+        <textColor>FFFFFF</textColor>
+        <agency>
+          <id>MTABC</id>
+          <name>MTA Bus Company</name>
+          <url>http://www.mta.info</url>
+          <timezone>America/New_York</timezone>
+          <lang>EN</lang>
+          <privateService>false</privateService>
+        </agency>
+      </route>
+    </routes>
+    <wheelchairBoarding>UNKNOWN</wheelchairBoarding>
+  </data>
+</response>

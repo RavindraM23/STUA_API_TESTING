@@ -60,7 +60,7 @@ class gtfsSubway(gtfs):
             self.station = convertSubway(station)
             self.station_id = station
             self.direction = direction
-            self.time = "NO TRAINS"
+            self.time = -1
             descriptions = "NO TRAINS"
             self.service_pattern = "NO TRAINS"
             self.service_description = "NO TRAINS"
@@ -89,6 +89,7 @@ class gtfsBus(gtfs):
         self.service_pattern = ""
         self.direction = 0
         self.trip_id = ""
+        self.vehicle = ""
 
     def get(self, stop, direction, responses):
         _validkeyBus(_getAPIBus())
@@ -99,10 +100,11 @@ class gtfsBus(gtfs):
             self.terminus_id = "NO BUSES"
             self.stop = stop
             self.stop_id = convertBus(stop)
-            self.time = "NO BUSES"
+            self.time = -1
             self.service_pattern = "NO BUSES"
             self.direction = direction
             self.trip_id = "NO BUSES"
+            self.vehicle = "NO BUSES"
         else:
             self.route_id = output[1]
             self.terminus = output[5]
@@ -113,8 +115,9 @@ class gtfsBus(gtfs):
             self.service_pattern = output[7]
             self.direction = output[6]
             self.trip_id = output[8]
+            self.vehicle = output[9]
 
-    def set(self, route_id, terminus_id, stop_id, time, service_pattern, direction, trip_id):
+    def set(self, route_id, terminus_id, stop_id, time, service_pattern, direction, trip_id, vehicle):
         self.route_id = route_id
         self.terminus = convertBus(terminus_id)
         self.terminus_id = terminus_id
@@ -124,6 +127,7 @@ class gtfsBus(gtfs):
         self.service_pattern = service_pattern
         self.direction = direction
         self.trip_id = trip_id
+        self.vehicle = vehicle
 
 class gtfsLIRR(gtfs):
     def __init__(self):
@@ -139,6 +143,7 @@ class gtfsLIRR(gtfs):
         self.station_id_list = ""
         self.station_name_list = ""
         self.trip_id = ""
+        self.vehicle = ""
 
     def get(self, stop, direction, responses):
         _validkeySubway(_getAPILIRR())
@@ -149,13 +154,14 @@ class gtfsLIRR(gtfs):
             self.terminus_id = "NO TRAINS"
             self.station = convertLIRR(stop)
             self.station_id = stop
-            self.time = "NO TRAINS"
+            self.time = -1
             self.service_description = "NO TRAINS"
             self.service_pattern = "NO TRAINS"
             self.station_id_list = "NO TRAINS"
             self.station_name_list = "NO TRAINS"
             self.direction = direction
             self.trip_id = "NO TRAINS"
+            self.vehicle = "NO TRAINS"
         else:
             self.route_id = output[1]
             self.terminus = convertLIRR(output[2])
@@ -169,8 +175,9 @@ class gtfsLIRR(gtfs):
             self.station_name_list = output[7]
             self.direction = output[4]
             self.trip_id = output[5]
+            self.vehicle = output[8]
 
-    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list):
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list, vehicle):
         self.route_id = route_id
         self.terminus = convertLIRR(terminus_id)
         self.terminus_id = terminus_id
@@ -183,6 +190,7 @@ class gtfsLIRR(gtfs):
         self.station_id_list = station_id_list
         self.station_name_list = [convertLIRR(i) for i in station_id_list]
         self.trip_id = trip_id
+        self.vehicle = vehicle
 
 class gtfsMNR(gtfs):
     def __init__(self):
@@ -198,6 +206,7 @@ class gtfsMNR(gtfs):
         self.station_id_list = ""
         self.station_name_list = ""
         self.trip_id = ""
+        self.vehicle = ""
 
     def get(self, stop, direction, responses):
         _validkeySubway(_getAPIMNR())
@@ -208,13 +217,14 @@ class gtfsMNR(gtfs):
             self.terminus_id = "NO TRAINS"
             self.station = convertMNR(stop)
             self.station_id = stop
-            self.time = "NO TRAINS"
+            self.time = -1
             self.service_description = "NO TRAINS"
             self.service_pattern = "NO TRAINS"
             self.station_id_list = "NO TRAINS"
             self.station_name_list = "NO TRAINS"
             self.direction = direction
             self.trip_id = "NO TRAINS"
+            self.vehicle = "NO TRAINS"
         else:
             self.route_id = output[1]
             self.terminus = convertMNR(output[2])
@@ -228,8 +238,9 @@ class gtfsMNR(gtfs):
             self.station_name_list = output[7]
             self.direction = output[4]
             self.trip_id = output[5]
+            self.vehicle = output[8]
 
-    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list):
+    def set(self, route_id, terminus_id, station_id, direction, time, pattern, description, trip_id, station_id_list, vehicle):
         self.route_id = route_id
         self.terminus = convertMNR(terminus_id)
         self.terminus_id = terminus_id
@@ -242,6 +253,16 @@ class gtfsMNR(gtfs):
         self.station_id_list = station_id_list
         self.station_name_list = [convertMNR(i) for i in station_id_list]
         self.trip_id = trip_id
+        self.vehicle = vehicle
+
+def sort(objects):
+    if (objects == []):
+        return False
+    for i in objects:
+        if (hasattr(i, "time") == False):
+            return False
+    objects.sort(key = lambda x: x.time)
+    return True
 
 def keySubway(string):
     global APISubway
@@ -434,6 +455,7 @@ def _transitBus(stop, direction, responses, API):
                     continue 
                 trip_id = entity.trip_update.trip.trip_id
                 route_id = entity.trip_update.trip.route_id
+                vehicle = entity.trip_update.vehicle.id[-4:]
                 for update in entity.trip_update.stop_time_update:
                     destination.append(update.stop_id)
                 terminus_id = destination[-1]
@@ -460,7 +482,7 @@ def _transitBus(stop, direction, responses, API):
                 root = tree.getroot()
                 terminus_name = root[4][4].text
                
-                times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id])
+                times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id, vehicle])
                 
     times.sort()
     try:
@@ -494,6 +516,12 @@ def  _transitLIRR(stop, direction, responses, API):
                 #print(time)
                 if (time < 0):
                     continue 
+                if entity.trip_update.trip.trip_id[-2] == "_":
+                    vehicle = entity.trip_update.trip.trip_id
+                    vehicle = vehicle.replace("_","")
+                    vehicle = entity.trip_update.trip.trip_id[-6:-2]
+                else:
+                    vehicle = entity.trip_update.trip.trip_id[-4:]
                 trip_id = entity.trip_update.trip.trip_id
                 route_id = entity.trip_update.trip.route_id
                 direction = entity.trip_update.trip.direction_id
@@ -507,7 +535,7 @@ def  _transitLIRR(stop, direction, responses, API):
             
                 #print(stop)
 
-                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list])
+                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
                 #print(data["gtfs"]["stops"])
                 #for i in data["gtfs"]["stops"]:
                 #print(i["stop_id"] + " " + i["stop_name"])
@@ -546,6 +574,12 @@ def  _transitMNR(stop, direction, responses, API):
                 #print(time)
                 if (time < 0):
                     continue 
+                if entity.trip_update.trip.trip_id[-2] == "_":
+                    vehicle = entity.trip_update.trip.trip_id
+                    vehicle = vehicle.replace("_","")
+                    vehicle = entity.trip_update.trip.trip_id[-6:-2]
+                else:
+                    vehicle = entity.trip_update.trip.trip_id[-4:]
                 trip_id = entity.trip_update.trip.trip_id
                 route_id = entity.trip_update.trip.route_id
                 direction = entity.trip_update.trip.direction_id
@@ -559,7 +593,7 @@ def  _transitMNR(stop, direction, responses, API):
             
                 #print(stop)
 
-                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list])
+                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
                 #print(data["gtfs"]["stops"])
                 #for i in data["gtfs"]["stops"]:
                 #print(i["stop_id"] + " " + i["stop_name"])
