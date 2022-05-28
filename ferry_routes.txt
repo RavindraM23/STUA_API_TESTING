@@ -1,0 +1,11 @@
+﻿route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
+"AS",1,"AS","Astoria",4,FF6B00,FFFFFF
+"ER",1,"ER","East River",4,00839C,FFFFFF
+"ERS",1,"ERS","Midtown Shuttle",3,00A1E1,FFFFFF
+"GI",1,"GI","Governors Island Shuttle",4,9795A0,FFFFFF
+"RES",1,"RES","Rockaway East",3,00A1E1,FFFFFF
+"RW",1,"RW","Rockaway",4,B218AA,FFFFFF
+"RWS",1,"RWS","Rockaway West",3,00A1E1,FFFFFF
+"SB",1,"SB","South Brooklyn",4,FFD100,FFFFFF
+"SG",1,"SG","St. George",4,D0006F,FFFFFF
+"SV",1,"SV","Soundview",4,4E008E,FFFFFF

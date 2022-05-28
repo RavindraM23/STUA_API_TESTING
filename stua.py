@@ -1,3 +1,4 @@
+from decimal import InvalidContext
 import requests, csv, datetime, math, os, json, calendar
 from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
@@ -49,6 +50,7 @@ class gtfsSubway(gtfs):
 
     def get(self, station, direction, responses):
         _validkeySubway(_getAPISubway())
+        _responseIndex(responses)
         output = _transitSubway(station, direction, responses, _getAPISubway())
         #print(output)
         if (output == "NO TRAINS"):
@@ -91,6 +93,7 @@ class gtfsBus(gtfs):
 
     def get(self, stop, direction, responses):
         _validkeyBus(_getAPIBus())
+        _responseIndex(responses)
         output = _transitBus(stop, direction, responses, _getAPIBus())
         if (output == "NO BUSES"):
             self.route_id = "NO BUSES"
@@ -145,6 +148,7 @@ class gtfsLIRR(gtfs):
 
     def get(self, stop, direction, responses):
         _validkeySubway(_getAPILIRR())
+        _responseIndex(responses)
         output = _transitLIRR(stop, direction, responses, _getAPILIRR())
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
@@ -208,6 +212,7 @@ class gtfsMNR(gtfs):
 
     def get(self, stop, direction, responses):
         _validkeySubway(_getAPIMNR())
+        _responseIndex(responses)
         output = _transitMNR(stop, direction, responses, _getAPIMNR())
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
@@ -252,6 +257,61 @@ class gtfsMNR(gtfs):
         self.station_name_list = [convertMNR(i) for i in station_id_list]
         self.trip_id = trip_id
         self.vehicle = vehicle
+
+class gtfsFerry(gtfs):
+    def __init__(self):
+        self.route_id = ""
+        self.terminus = ""
+        self.terminus_id = ""
+        self.stop = "" 
+        self.stop_id = ""
+        self.time = 0
+        self.stop_id_list = ""
+        self.stop_name_list = ""
+        self.trip_id = ""
+        self.vehicle = ""
+
+    def get(self, stop, responses):
+        _responseIndex(responses)
+        output = _transitFerry(stop, responses)
+        if (output == "NO FERRIES"):
+            self.route_id = "NO FERRIES"
+            self.terminus = "NO FERRIES"
+            self.terminus_id = "NO FERRIES"
+            self.stop = convertFerry(stop)
+            self.stop_id = stop
+            self.time = -1
+            self.stop_id_list = "NO FERRIES"
+            self.stop_name_list = "NO FERRIES"
+            self.trip_id = "NO FERRIES"
+            self.vehicle = "NO FERRIES"
+        else:
+            self.route_id = convertFerry(output[1])
+            self.terminus = convertFerry(output[1])
+            self.terminus_id = output[1]
+            self.stop = convertFerry(output[2])
+            self.stop_id = output[2]
+            self.time = output[0]
+            self.stop_id_list = output[4]
+            self.stop_name_list = output[5]
+            self.trip_id = output[3]
+            self.vehicle = output[6]
+
+    def set(self, route_id, terminus_id, stop_id, time, trip_id, stop_id_list, vehicle):
+        self.route_id = route_id
+        self.terminus = convertFerry(terminus_id)
+        self.terminus_id = terminus_id
+        self.stop = convertFerry(stop_id)
+        self.stop_id = stop_id
+        self.time = time
+        self.stop_id_list = stop_id_list
+        self.stop_name_list = [convertFerry(i) for i in stop_id_list]
+        self.trip_id = trip_id
+        self.vehicle = vehicle
+
+def _responseIndex(index):
+    if (index <= 0):
+        raise Exception("INVALID RESPONSES INDEX, MUST BE > 0")
 
 def sort(objects):
     if (objects == []):
@@ -363,7 +423,21 @@ def convertMNR(input):
             if row[0] == input:
                output = row[2]
     #print(output)
-    return output 
+    return output
+
+def convertFerry(input):
+    if type(input) != type(""):
+        raise Exception("INVALID CLASS: This method requires a String")
+    output = []
+    with open('ferry_stops.txt','r') as csv_file:
+        csv_file = csv.reader(csv_file)
+        for row in csv_file:
+            if row[0] == input:
+                output.append(row[2])
+    if (len(output) == 1):
+        for i in output: return i
+    else:
+        return output
 
 def _url():
     link = []
@@ -607,6 +681,57 @@ def  _transitMNR(stop, direction, responses, API):
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     return times 
+
+def _transitFerry(stop, responses):
+    current_time = datetime.datetime.now()
+    times = []
+    destination = []
+    #print(API)
+    response = requests.get("http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/tripupdate")
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open(f"logs/NYCFerry/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    for entity in feed.entity:
+        for update in entity.trip_update.stop_time_update:
+            #print(update.stop_id)
+            if (update.stop_id == stop):
+                #print("checkpointA")
+                station_id = update.stop_id
+                time = update.arrival.time
+                if (time < 0):
+                    time = update.departure.time
+                time = datetime.datetime.fromtimestamp(time)
+                time = math.trunc(((time - current_time).total_seconds()) / 60)
+                #print(time)
+                if (time < 0):
+                    continue 
+                trip_id = entity.trip_update.trip.trip_id
+                station_id_list = []
+                for update in entity.trip_update.stop_time_update:
+                    destination.append(update.stop_id)
+                    station_id_list.append(update.stop_id)
+                #print(service_description)
+                station_stop_list = [convertFerry(i) for i in station_id_list]
+                terminus_id = destination[-1]
+                vehicle = entity.trip_update.vehicle.label
+            
+                #print(stop)
+
+                times.append([time, terminus_id, station_id, trip_id, station_id_list, station_stop_list, vehicle])
+                #print(data["gtfs"]["stops"])
+                #for i in data["gtfs"]["stops"]:
+                #print(i["stop_id"] + " " + i["stop_name"])
+    times.sort()
+    try:
+        times = times[responses-1]
+    except:
+        return "NO FERRIES"
+        #print(times)
+
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+        test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    return times
     
 
 def _routes(service):
