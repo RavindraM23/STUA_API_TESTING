@@ -266,8 +266,6 @@ class gtfsFerry(gtfs):
         self.stop = "" 
         self.stop_id = ""
         self.time = 0
-        self.stop_id_list = ""
-        self.stop_name_list = ""
         self.trip_id = ""
         self.vehicle = ""
 
@@ -281,8 +279,6 @@ class gtfsFerry(gtfs):
             self.stop = convertFerry(stop)
             self.stop_id = stop
             self.time = -1
-            self.stop_id_list = "NO FERRIES"
-            self.stop_name_list = "NO FERRIES"
             self.trip_id = "NO FERRIES"
             self.vehicle = "NO FERRIES"
         else:
@@ -292,20 +288,16 @@ class gtfsFerry(gtfs):
             self.stop = convertFerry(output[2])
             self.stop_id = output[2]
             self.time = output[0]
-            self.stop_id_list = output[4]
-            self.stop_name_list = output[5]
             self.trip_id = output[3]
             self.vehicle = output[6]
 
-    def set(self, route_id, terminus_id, stop_id, time, trip_id, stop_id_list, vehicle):
+    def set(self, route_id, terminus_id, stop_id, time, trip_id, vehicle):
         self.route_id = route_id
         self.terminus = convertFerry(terminus_id)
         self.terminus_id = terminus_id
         self.stop = convertFerry(stop_id)
         self.stop_id = stop_id
         self.time = time
-        self.stop_id_list = stop_id_list
-        self.stop_name_list = [convertFerry(i) for i in stop_id_list]
         self.trip_id = trip_id
         self.vehicle = vehicle
 
