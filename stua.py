@@ -1,4 +1,3 @@
-from decimal import InvalidContext
 import requests, csv, datetime, math, os, json, calendar
 from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
@@ -764,5 +763,53 @@ def alertsSubway():
                         if update.language == "en-html":
                             alerts.append(entity.alert.header_text.translation[0].text)
     return alerts 
+
+def alertsLIRR():
+    alerts = []
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Flirr-alerts", headers={'x-api-key' : _getAPILIRR()})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open("logs/LIRR/alerts.txt","w") as f:
+        f.write(str(feed))
+    for entity in feed.entity:
+        for start in entity.alert.active_period:
+            if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
+                if (entity.alert.header_text.translation):
+                    for update in entity.alert.header_text.translation:
+                        if update.language == "en-html":
+                            alerts.append(entity.alert.header_text.translation[0].text)
+    return alerts
+
+def alertsMNR():
+    alerts = []
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fmnr-alerts", headers={'x-api-key' : _getAPIMNR()})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open("logs/MNR/alerts.txt","w") as f:
+        f.write(str(feed))
+    for entity in feed.entity:
+        for start in entity.alert.active_period:
+            if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
+                if (entity.alert.header_text.translation):
+                    for update in entity.alert.header_text.translation:
+                        if update.language == "en-html":
+                            alerts.append(entity.alert.header_text.translation[0].text)
+    return alerts
+
+def alertsBus():
+    alerts = []
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fbus-alerts", headers={'x-api-key' : _getAPIBus()})
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open("logs/Bustime/alerts.txt","w") as f:
+        f.write(str(feed))
+    for entity in feed.entity:
+        for start in entity.alert.active_period:
+            if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
+                if (entity.alert.header_text.translation):
+                    for update in entity.alert.header_text.translation:
+                        if update.language == "en-html":
+                            alerts.append(entity.alert.header_text.translation[0].text)
+    return alerts
 
 
