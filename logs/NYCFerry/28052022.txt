@@ -1,29 +1,7 @@
 header {
   gtfs_realtime_version: "2.0"
   incrementality: FULL_DATASET
-  timestamp: 1653785370
-}
-entity {
-  id: "1223"
-  trip_update {
-    trip {
-      trip_id: "1223"
-    }
-    stop_time_update {
-      stop_sequence: 5
-      arrival {
-        time: 1653785313
-      }
-      departure {
-        time: 1653785375
-      }
-      stop_id: "17"
-    }
-    vehicle {
-      id: "10"
-      label: "H103"
-    }
-  }
+  timestamp: 1653785940
 }
 entity {
   id: "1224"
@@ -32,14 +10,14 @@ entity {
       trip_id: "1224"
     }
     stop_time_update {
-      stop_sequence: 2
+      stop_sequence: 3
       arrival {
-        time: 1653785006
+        time: 1653785725
       }
       departure {
-        time: 1653785375
+        time: 1653785945
       }
-      stop_id: "20"
+      stop_id: "8"
     }
     vehicle {
       id: "51"
@@ -56,34 +34,12 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785580
+        time: 1653785938
       }
       departure {
         time: 1653787500
       }
       stop_id: "87"
-    }
-    vehicle {
-      id: "4"
-      label: "H101"
-    }
-  }
-}
-entity {
-  id: "1259"
-  trip_update {
-    trip {
-      trip_id: "1259"
-    }
-    stop_time_update {
-      stop_sequence: 5
-      arrival {
-        time: 1653785098
-      }
-      departure {
-        time: 1653785375
-      }
-      stop_id: "20"
     }
     vehicle {
       id: "4"
@@ -98,18 +54,18 @@ entity {
       trip_id: "1260"
     }
     stop_time_update {
-      stop_sequence: 3
-      departure {
-        time: 1653784964
-      }
-      stop_id: "19"
-    }
-    stop_time_update {
       stop_sequence: 4
-      arrival {
-        time: 1653785480
+      departure {
+        time: 1653785414
       }
       stop_id: "8"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      arrival {
+        time: 1653786023
+      }
+      stop_id: "20"
     }
     vehicle {
       id: "21"
@@ -126,10 +82,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785792
+        time: 1653785938
       }
       departure {
-        time: 1653785792
+        time: 1653785945
       }
       stop_id: "4"
     }
@@ -148,7 +104,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787332
+        time: 1653787274
       }
       departure {
         time: 1653787380
@@ -162,32 +118,6 @@ entity {
   }
 }
 entity {
-  id: "1289"
-  trip_update {
-    trip {
-      trip_id: "1289"
-    }
-    stop_time_update {
-      stop_sequence: 2
-      departure {
-        time: 1653782900
-      }
-      stop_id: "118"
-    }
-    stop_time_update {
-      stop_sequence: 3
-      arrival {
-        time: 1653785472
-      }
-      stop_id: "88"
-    }
-    vehicle {
-      id: "44"
-      label: "H115"
-    }
-  }
-}
-entity {
   id: "1290"
   trip_update {
     trip {
@@ -196,14 +126,14 @@ entity {
     stop_time_update {
       stop_sequence: 2
       departure {
-        time: 1653784897
+        time: 1653784867
       }
       stop_id: "118"
     }
     stop_time_update {
       stop_sequence: 3
       arrival {
-        time: 1653787469
+        time: 1653787440
       }
       stop_id: "88"
     }
@@ -222,10 +152,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787623
+        time: 1653787496
       }
       departure {
-        time: 1653787623
+        time: 1653787496
       }
       stop_id: "87"
     }
@@ -242,18 +172,18 @@ entity {
       trip_id: "1327"
     }
     stop_time_update {
-      stop_sequence: 1
-      departure {
-        time: 1653783006
-      }
-      stop_id: "88"
-    }
-    stop_time_update {
       stop_sequence: 2
-      arrival {
-        time: 1653785389
+      departure {
+        time: 1653785447
       }
       stop_id: "118"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653786407
+      }
+      stop_id: "87"
     }
     vehicle {
       id: "45"
@@ -270,14 +200,14 @@ entity {
     stop_time_update {
       stop_sequence: 1
       departure {
-        time: 1653784706
+        time: 1653784693
       }
       stop_id: "88"
     }
     stop_time_update {
       stop_sequence: 2
       arrival {
-        time: 1653787089
+        time: 1653787077
       }
       stop_id: "118"
     }
@@ -296,7 +226,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785483
+        time: 1653785938
       }
       departure {
         time: 1653786360
@@ -318,7 +248,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787480
+        time: 1653787450
       }
       departure {
         time: 1653788040
@@ -338,18 +268,18 @@ entity {
       trip_id: "1354"
     }
     stop_time_update {
-      stop_sequence: 5
-      departure {
-        time: 1653784701
-      }
-      stop_id: "24"
-    }
-    stop_time_update {
       stop_sequence: 6
-      arrival {
-        time: 1653785555
+      departure {
+        time: 1653785640
       }
       stop_id: "118"
+    }
+    stop_time_update {
+      stop_sequence: 7
+      arrival {
+        time: 1653786083
+      }
+      stop_id: "23"
     }
     vehicle {
       id: "5"
@@ -366,10 +296,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785990
+        time: 1653786138
       }
       departure {
-        time: 1653786000
+        time: 1653786138
       }
       stop_id: "115"
     }
@@ -380,24 +310,46 @@ entity {
   }
 }
 entity {
+  id: "1356"
+  trip_update {
+    trip {
+      trip_id: "1356"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653789209
+      }
+      departure {
+        time: 1653789360
+      }
+      stop_id: "115"
+    }
+    vehicle {
+      id: "5"
+      label: "H102"
+    }
+  }
+}
+entity {
   id: "1415"
   trip_update {
     trip {
       trip_id: "1415"
     }
     stop_time_update {
-      stop_sequence: 5
-      departure {
-        time: 1653784995
-      }
-      stop_id: "87"
-    }
-    stop_time_update {
       stop_sequence: 6
-      arrival {
-        time: 1653785454
+      departure {
+        time: 1653785602
       }
       stop_id: "20"
+    }
+    stop_time_update {
+      stop_sequence: 7
+      arrival {
+        time: 1653786133
+      }
+      stop_id: "115"
     }
     vehicle {
       id: "14"
@@ -413,13 +365,17 @@ entity {
     }
     stop_time_update {
       stop_sequence: 5
-      arrival {
-        time: 1653785360
-      }
       departure {
-        time: 1653785375
+        time: 1653785483
       }
       stop_id: "87"
+    }
+    stop_time_update {
+      stop_sequence: 6
+      arrival {
+        time: 1653785944
+      }
+      stop_id: "20"
     }
     vehicle {
       id: "11"
@@ -436,10 +392,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653786003
+        time: 1653786089
       }
       departure {
-        time: 1653786003
+        time: 1653786089
       }
       stop_id: "23"
     }
@@ -456,14 +412,14 @@ entity {
       trip_id: "1464"
     }
     stop_time_update {
-      stop_sequence: 3
+      stop_sequence: 4
       arrival {
-        time: 1653785211
+        time: 1653785835
       }
       departure {
-        time: 1653785375
+        time: 1653785945
       }
-      stop_id: "17"
+      stop_id: "90"
     }
     vehicle {
       id: "49"
@@ -500,14 +456,14 @@ entity {
       trip_id: "1500"
     }
     stop_time_update {
-      stop_sequence: 3
+      stop_sequence: 5
       arrival {
-        time: 1653785230
+        time: 1653785859
       }
       departure {
-        time: 1653785375
+        time: 1653785945
       }
-      stop_id: "25"
+      stop_id: "17"
     }
     vehicle {
       id: "43"
@@ -524,7 +480,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787022
+        time: 1653787123
       }
       departure {
         time: 1653787380
@@ -546,10 +502,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653786234
+        time: 1653786214
       }
       departure {
-        time: 1653786234
+        time: 1653786214
       }
       stop_id: "87"
     }
@@ -560,24 +516,46 @@ entity {
   }
 }
 entity {
+  id: "1521"
+  trip_update {
+    trip {
+      trip_id: "1521"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653788743
+      }
+      departure {
+        time: 1653789000
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "20"
+      label: "H205"
+    }
+  }
+}
+entity {
   id: "1538"
   trip_update {
     trip {
       trip_id: "1538"
     }
     stop_time_update {
-      stop_sequence: 4
-      departure {
-        time: 1653784927
-      }
-      stop_id: "17"
-    }
-    stop_time_update {
       stop_sequence: 5
-      arrival {
-        time: 1653785425
+      departure {
+        time: 1653785405
       }
       stop_id: "114"
+    }
+    stop_time_update {
+      stop_sequence: 6
+      arrival {
+        time: 1653786197
+      }
+      stop_id: "87"
     }
     vehicle {
       id: "3"
@@ -592,14 +570,18 @@ entity {
       trip_id: "1539"
     }
     stop_time_update {
-      stop_sequence: 1
-      arrival {
-        time: 1653785369
-      }
+      stop_sequence: 2
       departure {
-        time: 1653785400
+        time: 1653785511
       }
-      stop_id: "141"
+      stop_id: "112"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653786647
+      }
+      stop_id: "113"
     }
     vehicle {
       id: "20"
@@ -608,28 +590,11 @@ entity {
   }
 }
 entity {
-  id: "1645"
+  id: "1646"
   trip_update {
     trip {
-      trip_id: "1645"
-    }
-    stop_time_update {
-      stop_sequence: 8
-      departure {
-        time: 1653785233
-      }
-      stop_id: "142"
-    }
-    stop_time_update {
-      stop_sequence: 9
-      arrival {
-        time: 1653785450
-      }
-      stop_id: "16"
-    }
-    vehicle {
-      id: "42"
-      label: "SBC408"
+      trip_id: "1646"
+      schedule_relationship: CANCELED
     }
   }
 }
@@ -642,10 +607,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653786957
+        time: 1653787295
       }
       departure {
-        time: 1653786957
+        time: 1653787295
       }
       stop_id: "62"
     }
@@ -663,13 +628,17 @@ entity {
     }
     stop_time_update {
       stop_sequence: 1
-      arrival {
-        time: 1653785457
-      }
       departure {
-        time: 1653785457
+        time: 1653785795
       }
       stop_id: "16"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      arrival {
+        time: 1653787291
+      }
+      stop_id: "62"
     }
     vehicle {
       id: "42"
@@ -686,10 +655,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653788457
+        time: 1653788795
       }
       departure {
-        time: 1653788457
+        time: 1653788795
       }
       stop_id: "16"
     }
@@ -706,14 +675,18 @@ entity {
       trip_id: "1713"
     }
     stop_time_update {
-      stop_sequence: 1
-      arrival {
-        time: 1653785414
-      }
+      stop_sequence: 2
       departure {
-        time: 1653785520
+        time: 1653785835
       }
-      stop_id: "49"
+      stop_id: "50"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653785944
+      }
+      stop_id: "51"
     }
     vehicle {
       id: "47"
@@ -730,36 +703,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787200
+        time: 1653787272
       }
       departure {
-        time: 1653787200
-      }
-      stop_id: "49"
-    }
-    vehicle {
-      id: "47"
-      label: "SBC409"
-    }
-  }
-}
-entity {
-  id: "1749"
-  trip_update {
-    trip {
-      trip_id: "1749"
-    }
-    stop_time_update {
-      stop_sequence: 1
-      departure {
-        time: 1653784634
-      }
-      stop_id: "16"
-    }
-    stop_time_update {
-      stop_sequence: 2
-      arrival {
-        time: 1653785407
+        time: 1653787272
       }
       stop_id: "49"
     }
@@ -778,10 +725,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653786240
+        time: 1653786492
       }
       departure {
-        time: 1653786420
+        time: 1653786492
       }
       stop_id: "16"
     }
@@ -800,7 +747,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653787920
+        time: 1653787992
       }
       departure {
         time: 1653788100
@@ -822,10 +769,10 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785546
+        time: 1653785938
       }
       departure {
-        time: 1653785940
+        time: 1653785945
       }
       stop_id: "138"
     }
@@ -858,32 +805,6 @@ entity {
   }
 }
 entity {
-  id: "1786"
-  trip_update {
-    trip {
-      trip_id: "1786"
-    }
-    stop_time_update {
-      stop_sequence: 2
-      departure {
-        time: 1653784558
-      }
-      stop_id: "136"
-    }
-    stop_time_update {
-      stop_sequence: 3
-      arrival {
-        time: 1653785540
-      }
-      stop_id: "138"
-    }
-    vehicle {
-      id: "2"
-      label: "H201"
-    }
-  }
-}
-entity {
   id: "1787"
   trip_update {
     trip {
@@ -892,7 +813,7 @@ entity {
     stop_time_update {
       stop_sequence: 1
       arrival {
-        time: 1653785369
+        time: 1653785938
       }
       departure {
         time: 1653786300
@@ -905,4 +826,26 @@ entity {
     }
   }
 }
- 2022-05-28 20:49:53.594255
+entity {
+  id: "1788"
+  trip_update {
+    trip {
+      trip_id: "1788"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787920
+      }
+      departure {
+        time: 1653789000
+      }
+      stop_id: "137"
+    }
+    vehicle {
+      id: "2"
+      label: "H201"
+    }
+  }
+}
+ 2022-05-28 20:59:28.132408
