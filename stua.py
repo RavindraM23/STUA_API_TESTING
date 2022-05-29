@@ -260,7 +260,8 @@ class gtfsMNR(gtfs):
 
 class gtfsFerry(gtfs):
     def __init__(self):
-        self.route_id = ""
+        self.route_id_SN = ""
+        self.route_id_LN = ""
         self.terminus = ""
         self.terminus_id = ""
         self.stop = "" 
@@ -273,7 +274,8 @@ class gtfsFerry(gtfs):
         _responseIndex(responses)
         output = _transitFerry(stop, responses)
         if (output == "NO FERRIES"):
-            self.route_id = "NO FERRIES"
+            self.route_id_SN = "NO FERRIES"
+            self.route_id_LN = "NO FERRIES"
             self.terminus = "NO FERRIES"
             self.terminus_id = "NO FERRIES"
             self.stop = convertFerry(stop)
@@ -282,7 +284,8 @@ class gtfsFerry(gtfs):
             self.trip_id = "NO FERRIES"
             self.vehicle = "NO FERRIES"
         else:
-            self.route_id = convertFerry(output[1])
+            self.route_id_SN = output[7]
+            self.route_id_LN = output[8]
             self.terminus = convertFerry(output[1])
             self.terminus_id = output[1]
             self.stop = convertFerry(output[2])
@@ -290,10 +293,10 @@ class gtfsFerry(gtfs):
             self.time = output[0]
             self.trip_id = output[3]
             self.vehicle = output[6]
-            print(output[5])
 
-    def set(self, route_id, terminus_id, stop_id, time, trip_id, vehicle):
-        self.route_id = route_id
+    def set(self, route_id_SN, route_id_LN, terminus_id, stop_id, time, trip_id, vehicle):
+        self.route_id_SN = route_id_SN
+        self.route_id_LN = route_id_LN
         self.terminus = convertFerry(terminus_id)
         self.terminus_id = terminus_id
         self.stop = convertFerry(stop_id)
@@ -708,10 +711,22 @@ def _transitFerry(stop, responses):
                 station_stop_list = [convertFerry(i) for i in station_id_list]
                 terminus_id = destination[-1]
                 vehicle = entity.trip_update.vehicle.label
+
+                with open('ferry_trips.txt','r') as csv_file:
+                    csv_file = csv.reader(csv_file)
+                    for row in csv_file:
+                        if row[2] == trip_id:
+                            route_id_SN = row[0]
+
+                with open('ferry_routes.txt','r') as csv_file:
+                    csv_file = csv.reader(csv_file)
+                    for row in csv_file:
+                        if row[0] == route_id_SN:
+                            route_id_LN = row[3]
             
                 #print(stop)
 
-                times.append([time, terminus_id, station_id, trip_id, station_id_list, station_stop_list, vehicle])
+                times.append([time, terminus_id, station_id, trip_id, station_id_list, station_stop_list, vehicle, route_id_SN, route_id_LN])
                 #print(data["gtfs"]["stops"])
                 #for i in data["gtfs"]["stops"]:
                 #print(i["stop_id"] + " " + i["stop_name"])
