@@ -812,4 +812,19 @@ def alertsBus():
                             alerts.append(entity.alert.header_text.translation[0].text)
     return alerts
 
+def alertsFerry():
+    alerts = []
+    response = requests.get("http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/alert")
+    feed = gtfs_realtime_pb2.FeedMessage()
+    feed.ParseFromString(response.content)
+    with open("logs/NYCFerry/alerts.txt","w") as f:
+        f.write(str(feed))
+    for entity in feed.entity:
+        for start in entity.alert.active_period:
+            if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
+                if (entity.alert.header_text.translation):
+                    for update in entity.alert.header_text.translation:
+                        if update.language == "en-html":
+                            alerts.append(entity.alert.header_text.translation[0].text)
+    return alerts
 
