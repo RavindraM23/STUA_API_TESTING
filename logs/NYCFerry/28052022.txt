@@ -1,0 +1,908 @@
+header {
+  gtfs_realtime_version: "2.0"
+  incrementality: FULL_DATASET
+  timestamp: 1653785370
+}
+entity {
+  id: "1223"
+  trip_update {
+    trip {
+      trip_id: "1223"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      arrival {
+        time: 1653785313
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "17"
+    }
+    vehicle {
+      id: "10"
+      label: "H103"
+    }
+  }
+}
+entity {
+  id: "1224"
+  trip_update {
+    trip {
+      trip_id: "1224"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      arrival {
+        time: 1653785006
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "20"
+    }
+    vehicle {
+      id: "51"
+      label: "H119"
+    }
+  }
+}
+entity {
+  id: "1225"
+  trip_update {
+    trip {
+      trip_id: "1225"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785580
+      }
+      departure {
+        time: 1653787500
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "4"
+      label: "H101"
+    }
+  }
+}
+entity {
+  id: "1259"
+  trip_update {
+    trip {
+      trip_id: "1259"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      arrival {
+        time: 1653785098
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "20"
+    }
+    vehicle {
+      id: "4"
+      label: "H101"
+    }
+  }
+}
+entity {
+  id: "1260"
+  trip_update {
+    trip {
+      trip_id: "1260"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      departure {
+        time: 1653784964
+      }
+      stop_id: "19"
+    }
+    stop_time_update {
+      stop_sequence: 4
+      arrival {
+        time: 1653785480
+      }
+      stop_id: "8"
+    }
+    vehicle {
+      id: "21"
+      label: "H206"
+    }
+  }
+}
+entity {
+  id: "1261"
+  trip_update {
+    trip {
+      trip_id: "1261"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785792
+      }
+      departure {
+        time: 1653785792
+      }
+      stop_id: "4"
+    }
+    vehicle {
+      id: "10"
+      label: "H103"
+    }
+  }
+}
+entity {
+  id: "1262"
+  trip_update {
+    trip {
+      trip_id: "1262"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787332
+      }
+      departure {
+        time: 1653787380
+      }
+      stop_id: "4"
+    }
+    vehicle {
+      id: "51"
+      label: "H119"
+    }
+  }
+}
+entity {
+  id: "1289"
+  trip_update {
+    trip {
+      trip_id: "1289"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      departure {
+        time: 1653782900
+      }
+      stop_id: "118"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653785472
+      }
+      stop_id: "88"
+    }
+    vehicle {
+      id: "44"
+      label: "H115"
+    }
+  }
+}
+entity {
+  id: "1290"
+  trip_update {
+    trip {
+      trip_id: "1290"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      departure {
+        time: 1653784897
+      }
+      stop_id: "118"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653787469
+      }
+      stop_id: "88"
+    }
+    vehicle {
+      id: "41"
+      label: "H111"
+    }
+  }
+}
+entity {
+  id: "1291"
+  trip_update {
+    trip {
+      trip_id: "1291"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787623
+      }
+      departure {
+        time: 1653787623
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "43"
+      label: "H112"
+    }
+  }
+}
+entity {
+  id: "1327"
+  trip_update {
+    trip {
+      trip_id: "1327"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      departure {
+        time: 1653783006
+      }
+      stop_id: "88"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      arrival {
+        time: 1653785389
+      }
+      stop_id: "118"
+    }
+    vehicle {
+      id: "45"
+      label: "H113"
+    }
+  }
+}
+entity {
+  id: "1328"
+  trip_update {
+    trip {
+      trip_id: "1328"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      departure {
+        time: 1653784706
+      }
+      stop_id: "88"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      arrival {
+        time: 1653787089
+      }
+      stop_id: "118"
+    }
+    vehicle {
+      id: "18"
+      label: "H203"
+    }
+  }
+}
+entity {
+  id: "1329"
+  trip_update {
+    trip {
+      trip_id: "1329"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785483
+      }
+      departure {
+        time: 1653786360
+      }
+      stop_id: "88"
+    }
+    vehicle {
+      id: "44"
+      label: "H115"
+    }
+  }
+}
+entity {
+  id: "1330"
+  trip_update {
+    trip {
+      trip_id: "1330"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787480
+      }
+      departure {
+        time: 1653788040
+      }
+      stop_id: "88"
+    }
+    vehicle {
+      id: "41"
+      label: "H111"
+    }
+  }
+}
+entity {
+  id: "1354"
+  trip_update {
+    trip {
+      trip_id: "1354"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      departure {
+        time: 1653784701
+      }
+      stop_id: "24"
+    }
+    stop_time_update {
+      stop_sequence: 6
+      arrival {
+        time: 1653785555
+      }
+      stop_id: "118"
+    }
+    vehicle {
+      id: "5"
+      label: "H102"
+    }
+  }
+}
+entity {
+  id: "1355"
+  trip_update {
+    trip {
+      trip_id: "1355"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785990
+      }
+      departure {
+        time: 1653786000
+      }
+      stop_id: "115"
+    }
+    vehicle {
+      id: "14"
+      label: "H107"
+    }
+  }
+}
+entity {
+  id: "1415"
+  trip_update {
+    trip {
+      trip_id: "1415"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      departure {
+        time: 1653784995
+      }
+      stop_id: "87"
+    }
+    stop_time_update {
+      stop_sequence: 6
+      arrival {
+        time: 1653785454
+      }
+      stop_id: "20"
+    }
+    vehicle {
+      id: "14"
+      label: "H107"
+    }
+  }
+}
+entity {
+  id: "1416"
+  trip_update {
+    trip {
+      trip_id: "1416"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      arrival {
+        time: 1653785360
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "11"
+      label: "H104"
+    }
+  }
+}
+entity {
+  id: "1417"
+  trip_update {
+    trip {
+      trip_id: "1417"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653786003
+      }
+      departure {
+        time: 1653786003
+      }
+      stop_id: "23"
+    }
+    vehicle {
+      id: "5"
+      label: "H102"
+    }
+  }
+}
+entity {
+  id: "1464"
+  trip_update {
+    trip {
+      trip_id: "1464"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653785211
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "17"
+    }
+    vehicle {
+      id: "49"
+      label: "H214"
+    }
+  }
+}
+entity {
+  id: "1474"
+  trip_update {
+    trip {
+      trip_id: "1474"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787380
+      }
+      departure {
+        time: 1653787380
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "1"
+      label: "H200"
+    }
+  }
+}
+entity {
+  id: "1500"
+  trip_update {
+    trip {
+      trip_id: "1500"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653785230
+      }
+      departure {
+        time: 1653785375
+      }
+      stop_id: "25"
+    }
+    vehicle {
+      id: "43"
+      label: "H112"
+    }
+  }
+}
+entity {
+  id: "1501"
+  trip_update {
+    trip {
+      trip_id: "1501"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787022
+      }
+      departure {
+        time: 1653787380
+      }
+      stop_id: "113"
+    }
+    vehicle {
+      id: "49"
+      label: "H214"
+    }
+  }
+}
+entity {
+  id: "1520"
+  trip_update {
+    trip {
+      trip_id: "1520"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653786234
+      }
+      departure {
+        time: 1653786234
+      }
+      stop_id: "87"
+    }
+    vehicle {
+      id: "3"
+      label: "H202"
+    }
+  }
+}
+entity {
+  id: "1538"
+  trip_update {
+    trip {
+      trip_id: "1538"
+    }
+    stop_time_update {
+      stop_sequence: 4
+      departure {
+        time: 1653784927
+      }
+      stop_id: "17"
+    }
+    stop_time_update {
+      stop_sequence: 5
+      arrival {
+        time: 1653785425
+      }
+      stop_id: "114"
+    }
+    vehicle {
+      id: "3"
+      label: "H202"
+    }
+  }
+}
+entity {
+  id: "1539"
+  trip_update {
+    trip {
+      trip_id: "1539"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785369
+      }
+      departure {
+        time: 1653785400
+      }
+      stop_id: "141"
+    }
+    vehicle {
+      id: "20"
+      label: "H205"
+    }
+  }
+}
+entity {
+  id: "1645"
+  trip_update {
+    trip {
+      trip_id: "1645"
+    }
+    stop_time_update {
+      stop_sequence: 8
+      departure {
+        time: 1653785233
+      }
+      stop_id: "142"
+    }
+    stop_time_update {
+      stop_sequence: 9
+      arrival {
+        time: 1653785450
+      }
+      stop_id: "16"
+    }
+    vehicle {
+      id: "42"
+      label: "SBC408"
+    }
+  }
+}
+entity {
+  id: "1647"
+  trip_update {
+    trip {
+      trip_id: "1647"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653786957
+      }
+      departure {
+        time: 1653786957
+      }
+      stop_id: "62"
+    }
+    vehicle {
+      id: "42"
+      label: "SBC408"
+    }
+  }
+}
+entity {
+  id: "1683"
+  trip_update {
+    trip {
+      trip_id: "1683"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785457
+      }
+      departure {
+        time: 1653785457
+      }
+      stop_id: "16"
+    }
+    vehicle {
+      id: "42"
+      label: "SBC408"
+    }
+  }
+}
+entity {
+  id: "1685"
+  trip_update {
+    trip {
+      trip_id: "1685"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653788457
+      }
+      departure {
+        time: 1653788457
+      }
+      stop_id: "16"
+    }
+    vehicle {
+      id: "42"
+      label: "SBC408"
+    }
+  }
+}
+entity {
+  id: "1713"
+  trip_update {
+    trip {
+      trip_id: "1713"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785414
+      }
+      departure {
+        time: 1653785520
+      }
+      stop_id: "49"
+    }
+    vehicle {
+      id: "47"
+      label: "SBC409"
+    }
+  }
+}
+entity {
+  id: "1714"
+  trip_update {
+    trip {
+      trip_id: "1714"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787200
+      }
+      departure {
+        time: 1653787200
+      }
+      stop_id: "49"
+    }
+    vehicle {
+      id: "47"
+      label: "SBC409"
+    }
+  }
+}
+entity {
+  id: "1749"
+  trip_update {
+    trip {
+      trip_id: "1749"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      departure {
+        time: 1653784634
+      }
+      stop_id: "16"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      arrival {
+        time: 1653785407
+      }
+      stop_id: "49"
+    }
+    vehicle {
+      id: "47"
+      label: "SBC409"
+    }
+  }
+}
+entity {
+  id: "1750"
+  trip_update {
+    trip {
+      trip_id: "1750"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653786240
+      }
+      departure {
+        time: 1653786420
+      }
+      stop_id: "16"
+    }
+    vehicle {
+      id: "47"
+      label: "SBC409"
+    }
+  }
+}
+entity {
+  id: "1751"
+  trip_update {
+    trip {
+      trip_id: "1751"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653787920
+      }
+      departure {
+        time: 1653788100
+      }
+      stop_id: "16"
+    }
+    vehicle {
+      id: "47"
+      label: "SBC409"
+    }
+  }
+}
+entity {
+  id: "1769"
+  trip_update {
+    trip {
+      trip_id: "1769"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785546
+      }
+      departure {
+        time: 1653785940
+      }
+      stop_id: "138"
+    }
+    vehicle {
+      id: "2"
+      label: "H201"
+    }
+  }
+}
+entity {
+  id: "1770"
+  trip_update {
+    trip {
+      trip_id: "1770"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653788280
+      }
+      departure {
+        time: 1653788640
+      }
+      stop_id: "138"
+    }
+    vehicle {
+      id: "57"
+      label: "H501"
+    }
+  }
+}
+entity {
+  id: "1786"
+  trip_update {
+    trip {
+      trip_id: "1786"
+    }
+    stop_time_update {
+      stop_sequence: 2
+      departure {
+        time: 1653784558
+      }
+      stop_id: "136"
+    }
+    stop_time_update {
+      stop_sequence: 3
+      arrival {
+        time: 1653785540
+      }
+      stop_id: "138"
+    }
+    vehicle {
+      id: "2"
+      label: "H201"
+    }
+  }
+}
+entity {
+  id: "1787"
+  trip_update {
+    trip {
+      trip_id: "1787"
+    }
+    stop_time_update {
+      stop_sequence: 1
+      arrival {
+        time: 1653785369
+      }
+      departure {
+        time: 1653786300
+      }
+      stop_id: "137"
+    }
+    vehicle {
+      id: "57"
+      label: "H501"
+    }
+  }
+}
+ 2022-05-28 20:49:53.594255

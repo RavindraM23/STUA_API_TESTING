@@ -290,6 +290,7 @@ class gtfsFerry(gtfs):
             self.time = output[0]
             self.trip_id = output[3]
             self.vehicle = output[6]
+            print(output[5])
 
     def set(self, route_id, terminus_id, stop_id, time, trip_id, vehicle):
         self.route_id = route_id
