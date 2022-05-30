@@ -3,10 +3,8 @@ from abc import ABC, abstractmethod
 import xml.etree.ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
 
-APISubway = ""
-APIBus = ""
-APILIRR = ""
-APIMNR = "" 
+APIMTA = ""
+APIBUSTIME = ""
 
 class gtfs(ABC):
 
@@ -48,9 +46,9 @@ class gtfsSubway(gtfs):
         self.trip_id = trip_id
 
     def get(self, station, direction, responses):
-        _validkeySubway(_getAPISubway())
+        _validkeySubway(_getAPIMTA())
         _responseIndex(responses)
-        output = _transitSubway(station, direction, responses, _getAPISubway())
+        output = _transitSubway(station, direction, responses, _getAPIMTA())
         #print(output)
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
@@ -91,9 +89,9 @@ class gtfsBus(gtfs):
         self.vehicle = ""
 
     def get(self, stop, direction, responses):
-        _validkeyBus(_getAPIBus())
+        _validkeyBus(_getAPIBUSTIME())
         _responseIndex(responses)
-        output = _transitBus(stop, direction, responses, _getAPIBus())
+        output = _transitBus(stop, direction, responses, _getAPIBUSTIME())
         if (output == "NO BUSES"):
             self.route_id = "NO BUSES"
             self.terminus = "NO BUSES"
@@ -146,9 +144,9 @@ class gtfsLIRR(gtfs):
         self.vehicle = ""
 
     def get(self, stop, direction, responses):
-        _validkeySubway(_getAPILIRR())
+        _validkeySubway(_getAPIMTA())
         _responseIndex(responses)
-        output = _transitLIRR(stop, direction, responses, _getAPILIRR())
+        output = _transitLIRR(stop, direction, responses, _getAPIMTA())
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
             self.terminus = "NO TRAINS"
@@ -170,7 +168,7 @@ class gtfsLIRR(gtfs):
             self.station = convertLIRR(output[3])
             self.station_id = output[3]
             self.time = output[0]
-            self.service_description = f"{timeconvert(output[0])} train to " + convertLIRR(output[2])
+            self.service_description = f"{_timeconvert(output[0])} train to " + convertLIRR(output[2])
             self.service_pattern = convertLIRR(output[2])
             self.station_id_list = output[6]
             self.station_name_list = output[7]
@@ -210,9 +208,9 @@ class gtfsMNR(gtfs):
         self.vehicle = ""
 
     def get(self, stop, direction, responses):
-        _validkeySubway(_getAPIMNR())
+        _validkeySubway(_getAPIMTA())
         _responseIndex(responses)
-        output = _transitMNR(stop, direction, responses, _getAPIMNR())
+        output = _transitMNR(stop, direction, responses, _getAPIMTA())
         if (output == "NO TRAINS"):
             self.route_id = "NO TRAINS"
             self.terminus = "NO TRAINS"
@@ -234,7 +232,7 @@ class gtfsMNR(gtfs):
             self.station = convertMNR(output[3])
             self.station_id = output[3]
             self.time = output[0]
-            self.service_description = f"{timeconvert(output[0])} train to " + convertMNR(output[2])
+            self.service_description = f"{_timeconvert(output[0])} train to " + convertMNR(output[2])
             self.service_pattern = convertMNR(output[2])
             self.station_id_list = output[6]
             self.station_name_list = output[7]
@@ -317,35 +315,21 @@ def sort(objects):
     objects.sort(key = lambda x: x.time)
     return True
 
-def keySubway(string):
-    global APISubway
-    APISubway = string 
+def keyMTA(string):
+    global APIMTA
+    APIMTA = string 
 
-def keyBus(string):
-    global APIBus
-    APIBus = string 
+def keyBUSTIME(string):
+    global APIBUSTIME
+    APIBUSTIME = string 
 
-def keyLIRR(string):
-    global APILIRR
-    APILIRR = string 
+def _getAPIMTA():
+    return APIMTA
 
-def keyMNR(string):
-    global APIMNR
-    APIMNR = string 
+def _getAPIBUSTIME():
+    return APIBUSTIME
 
-def _getAPISubway():
-    return APISubway
-
-def _getAPIBus():
-    return APIBus 
-
-def _getAPILIRR():
-    return APILIRR
-
-def _getAPIMNR():
-    return APIMNR
-
-def timeconvert(input):
+def _timeconvert(input):
     out = datetime.datetime.now() + datetime.timedelta(minutes=input) 
     return out.strftime('%H:%M')
 
@@ -362,7 +346,7 @@ def convertBus(input):
         raise Exception("INVALID CLASS: This method requires a String or an Integer")
     if (type(input) == type(0)):
         input = str(input)
-    responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{input}.xml?key={_getAPIBus()}')
+    responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{input}.xml?key={_getAPIBUSTIME()}')
     filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
     with open(filenamevar,"wb") as f:
         f.write(responsestop.content)
@@ -750,7 +734,7 @@ def _routes(service):
 
 def alertsSubway():
     alerts = []
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts", headers={'x-api-key' : _getAPISubway()})
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
     with open("logs/NYCT_GTFS/alerts.txt","w") as f:
@@ -766,7 +750,7 @@ def alertsSubway():
 
 def alertsLIRR():
     alerts = []
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Flirr-alerts", headers={'x-api-key' : _getAPILIRR()})
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Flirr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
     with open("logs/LIRR/alerts.txt","w") as f:
@@ -782,7 +766,7 @@ def alertsLIRR():
 
 def alertsMNR():
     alerts = []
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fmnr-alerts", headers={'x-api-key' : _getAPIMNR()})
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fmnr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
     with open("logs/MNR/alerts.txt","w") as f:
@@ -798,7 +782,7 @@ def alertsMNR():
 
 def alertsBus():
     alerts = []
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fbus-alerts", headers={'x-api-key' : _getAPIBus()})
+    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fbus-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
     with open("logs/Bustime/alerts.txt","w") as f:
