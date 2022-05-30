@@ -10,7 +10,6 @@ While the project has not been realized yet, we are hoping you could help us. Th
 Below is a little tutorial on how to use the module. Additionally, here are some hyperlinks to any part of this tutorial:
 
 - [1. The MTA Google Transit API](#1)
-- [1.5. A Demonstration](#1.5)
 - [2. Station Names and Station IDs](#2)
 - [3. The GTFS class (NYCT)](#3)
 - [4. The GTFS class (Bustime)](#4)
