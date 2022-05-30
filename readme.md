@@ -18,6 +18,7 @@ Below is a little tutorial on how to use the module. Additionally, here are some
 - [7. The GTFS class (NYC Ferry)](#7)
 - [8. setX()](#8)
 - [9. Live Transit Alerts, alertsX()](#9)
+- [10. sort()](#10)
 
 ---
 
@@ -236,4 +237,28 @@ print(stua.alertsBus())
 print(stua.alertsLIRR())
 print(stua.alertsMNR())
 print(stua.alertsFerry())
+```
+
+## <a id =10> </a> 10. sort()
+
+The STUA sort static method intakes a list of gtfs objects and sorts them based on their time field. The gtfs objects do not have to be the same forms of transit. 
+
+```python
+import stua
+
+APIMTA = "<insert key here>"
+APIBUSTIME = "<insert key here>"
+stua.keyMTA(APIMTA)
+stua.keyBUSTIME(APIBUSTIME)
+
+train1 = stua.gtfsSubway()
+train2 = stua.gtfsSubway()
+ferry1 = stua.gtfsFerry()
+
+train1.get("A51", "N", 1)
+train2.get("A51", "S", 1)
+ferry1.get("90", 1)
+
+sorted = sort([train1, train2, ferry1])
+print(sorted)
 ```
