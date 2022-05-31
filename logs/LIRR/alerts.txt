@@ -1,0 +1,681 @@
+header {
+  gtfs_realtime_version: "2.0"
+  incrementality: FULL_DATASET
+  timestamp: 1653845119
+  [nyct_feed_header] {
+    nyct_subway_version: "1.0"
+  }
+}
+entity {
+  id: "lmm:alert:151216"
+  alert {
+    active_period {
+      start: 1653840783
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "5"
+    }
+    header_text {
+      translation {
+        text: "The 10:10am train from Jamaica due Montauk at 12:53pm is operating 23 minutes late due to earlier equipment trouble."
+        language: "en"
+      }
+      translation {
+        text: "<p>The <b>10:10am train from Jamaica due Montauk at 12:53pm</b> is operating 23 minutes late due to earlier equipment trouble.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:alert:151218"
+  alert {
+    active_period {
+      start: 1653841837
+      end: 1653847227
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "5"
+    }
+    header_text {
+      translation {
+        text: "The 11:26am train from Montauk due Jamaica at 1:55pm is operating 12 minutes late due to a late eastbound train in single-track territory."
+        language: "en"
+      }
+      translation {
+        text: "<p>The <b>11:26am train from Montauk due Jamaica at 1:55pm</b> is operating 12 minutes late due to a late eastbound train in single-track territory. </p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4606"
+  alert {
+    active_period {
+      start: 1654286400
+      end: 1654315140
+    }
+    active_period {
+      start: 1654378200
+      end: 1654401540
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "12"
+    }
+    header_text {
+      translation {
+        text: "Some trains will make added stops at Forest Hills for concert attendees"
+        language: "en"
+      }
+      translation {
+        text: "Some trains will make added stops at Forest Hills for concert attendees"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "You must be in one of the the first six cars to exit. Take your ticket with you as you leave the train, it will be checked at the station before you can exit.\n\nSee more details on getting to Forest Hills Stadium"
+        language: "en"
+      }
+      translation {
+        text: "<p>You must be in one of the the first six cars to exit. Take your ticket with you as you leave the train, it will be checked at the station before you can exit.</p><p style=\"min-height:10px\"></p><p><a title=\"\" target=\"_blank\" href=\"https://new.mta.info/guides/stadiums/forest-hills-stadium-queens\" rel=\"noopener noreferrer nofollow\">See more details on getting to Forest Hills Stadium</a></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4440"
+  alert {
+    active_period {
+      start: 1655524860
+      end: 1655614800
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "9"
+    }
+    header_text {
+      translation {
+        text: "No trains between Great Neck and Port Washington"
+        language: "en"
+      }
+      translation {
+        text: "No trains between Great Neck and Port Washington"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Trains will run between Penn Station and Great Neck on their regular schedules.\n\nBuses will run every hour between Great Neck, Manhasset, and Port Washington.\nShuttle vans will run between Great Neck and Plandome. At Great Neck, see an LIRR employee to board the van. Those boarding at Plandome may wish to use Great Neck or Manhasset stations instead.\n\nThe last trains to run to Port Washington are the 11:11 PM from Penn Station and the 11:38 PM from Port Washington on Friday night. Service resumes with the 12:17 AM from Penn Station and the 2:10 AM from Port Washington on Sunday morning.\n\nDetailed schedule information will be available as the work approaches."
+        language: "en"
+      }
+      translation {
+        text: "<p>Trains will run between Penn Station and Great Neck on their regular schedules.</p><p style=\"min-height:10px\"></p><p>Buses will run every hour between Great Neck, <strong>Manhasset</strong>, and <strong>Port Washington</strong>.</p><p>Shuttle vans will run between Great Neck and <strong>Plandome</strong>. At Great Neck, see an LIRR employee to board the van. Those boarding at Plandome may wish to use Great Neck or Manhasset stations instead.</p><p style=\"min-height:10px\"></p><p>The last trains to run to Port Washington are the 11:11 PM from Penn Station and the 11:38 PM from Port Washington on Friday night. Service resumes with the 12:17 AM from Penn Station and the 2:10 AM from Port Washington on Sunday morning.</p><p style=\"min-height:10px\"></p><p>Detailed schedule information will be available as the work approaches.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4439"
+  alert {
+    active_period {
+      start: 1655118000
+      end: 1655154000
+    }
+    active_period {
+      start: 1655204400
+      end: 1655240400
+    }
+    active_period {
+      start: 1655290800
+      end: 1655326800
+    }
+    active_period {
+      start: 1655377200
+      end: 1655413200
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "4"
+    }
+    header_text {
+      translation {
+        text: "Buses replace trains between Ronkonkoma and Greenport"
+        language: "en"
+      }
+      translation {
+        text: "Buses replace trains between Ronkonkoma and Greenport"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Westbound buses depart up to 20 minutes earlier than normal train times. We are conducting track inspections along the line.\n\nFor bus departure times, view the special timetable."
+        language: "en"
+      }
+      translation {
+        text: "<p>Westbound buses depart up to 20 minutes earlier than normal train times. We are conducting track inspections along the line.</p><p style=\"min-height:10px\"></p><p>For bus departure times, <a title=\"\" target=\"_blank\" href=\"https://new.mta.info/document/87661\" rel=\"noopener noreferrer nofollow\">view the special timetable</a>.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4329"
+  alert {
+    active_period {
+      start: 1655037000
+      end: 1655048700
+    }
+    active_period {
+      start: 1655066700
+      end: 1655073900
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "10"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "4"
+    }
+    header_text {
+      translation {
+        text: "We are adding six extra trains for the Puerto Rican Day Parade and the Farmingdale Pride Parade"
+        language: "en"
+      }
+      translation {
+        text: "We are adding six extra trains for the Puerto Rican Day Parade and the Farmingdale Pride Parade"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Westbound\n8:43 AM from Ronkonkoma, arriving Penn at 10:12 AM\n8:43 AM from Ronkonkoma, arriving Penn at 11:12 AM\n6:02 PM from Farmingdale, arriving Penn at 7:02 PM\nEastbound\n10:51 AM from Penn to Farmingdale\n4:51 PM from Penn to Ronkonkoma\n5:51 PM from Penn to Ronkonkoma\nAll six trains will make stops at Woodside, Jamaica, New Hyde Park, Mineola, Westbury, Hicksville, and all stops east thereof to Farmingdale/Ronkonkoma, except Pinelawn."
+        language: "en"
+      }
+      translation {
+        text: "<h3>Westbound</h3><ul><li><p><strong>8:43 AM</strong> from Ronkonkoma, arriving Penn at 10:12 AM</p></li><li><p><strong>8:43 AM</strong> from Ronkonkoma, arriving Penn at 11:12 AM</p></li><li><p><strong>6:02 PM</strong> from Farmingdale, arriving Penn at 7:02 PM</p></li></ul><h3>Eastbound</h3><ul><li><p><strong>10:51 AM</strong> from Penn to Farmingdale</p></li><li><p><strong>4:51 PM</strong> from Penn to Ronkonkoma</p></li><li><p><strong>5:51 PM</strong> from Penn to Ronkonkoma</p></li></ul><p>All six trains will make stops at Woodside, Jamaica, New Hyde Park, Mineola, Westbury, Hicksville, and all stops east thereof to Farmingdale/Ronkonkoma, except Pinelawn.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4325"
+  alert {
+    active_period {
+      start: 1654090200
+      end: 1654111800
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "8"
+    }
+    header_text {
+      translation {
+        text: "Buses replace trains between Valley Stream and West Hempstead"
+        language: "en"
+      }
+      translation {
+        text: "Buses replace trains between Valley Stream and West Hempstead"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Westbound buses depart up to 20 minutes earlier than normal train times while we conduct track inspections.\n\nThe last trains to operate are the 8:28 AM train from West Hempstead and the 8:54 AM train from Jamaica. Service resumes with the 3:34 PM train from Valley Stream and the 4:04 PM train from West Hempstead.\n\nFor bus departure times, view the special timetable."
+        language: "en"
+      }
+      translation {
+        text: "<p>Westbound buses depart up to 20 minutes earlier than normal train times while we conduct track inspections.</p><p style=\"min-height:10px\"></p><p>The last trains to operate are the 8:28 AM train from West Hempstead and the 8:54 AM train from Jamaica. Service resumes with the 3:34 PM train from Valley Stream and the 4:04 PM train from West Hempstead.</p><p style=\"min-height:10px\"></p><p>For bus departure times, <a title=\"\" target=\"_blank\" href=\"https://new.mta.info/document/87651\" rel=\"noopener noreferrer nofollow\">view the special timetable</a>.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4257"
+  alert {
+    active_period {
+      start: 1654956000
+      end: 1654999200
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "2"
+    }
+    header_text {
+      translation {
+        text: "Eastbound trains skip Hollis and Queens Village"
+        language: "en"
+      }
+      translation {
+        text: "Eastbound trains skip Hollis and Queens Village"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Shuttle buses will connect Jamaica, Hollis, Queens Village, and Bellerose. Buses will connect with eastbound trains at both Jamaica and Bellerose.\n\nWe are adjusting service so we can better serve those traveling to and from the Belmont Stakes."
+        language: "en"
+      }
+      translation {
+        text: "<p>Shuttle buses will connect Jamaica, Hollis, Queens Village, and Bellerose. Buses will connect with eastbound trains at both Jamaica and Bellerose.</p><p style=\"min-height:10px\"></p><p>We are adjusting service so we can better serve those traveling to and from the Belmont Stakes.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4256"
+  alert {
+    active_period {
+      start: 1654972200
+      end: 1655002800
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "2"
+    }
+    header_text {
+      translation {
+        text: "Trains run every two hours between Jamaica and Hempstead"
+        language: "en"
+      }
+      translation {
+        text: "Trains run every two hours between Jamaica and Hempstead"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "All trains will depart from Track H1 at Floral Park and Platform A at Stewart Manor, Nassau Boulevard, and Garden City.\nWe are storing trains on the other track during the Belmont Stakes."
+        language: "en"
+      }
+      translation {
+        text: "<p>All trains will depart from Track H1 at Floral Park and Platform A at Stewart Manor, Nassau Boulevard, and Garden City.</p><p>We are storing trains on the other track during the Belmont Stakes.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4239"
+  alert {
+    active_period {
+      start: 1653883277
+      end: 1653969540
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "5"
+    }
+    header_text {
+      translation {
+        text: "Trains run on a Sunday schedule on Memorial Day"
+        language: "en"
+      }
+      translation {
+        text: "Trains run on a Sunday schedule on Memorial Day"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The 1:23 PM, 4:00 PM, and 6:37 PM westbound trains from Montauk, and the 3:23 PM westbound train from Southampton, will run."
+        language: "en"
+      }
+      translation {
+        text: "<p>The <strong>1:23 PM</strong>, <strong>4:00 PM</strong>, and <strong>6:37 PM</strong> westbound trains from Montauk, and the <strong>3:23 PM</strong> westbound train from Southampton, will run.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4238"
+  alert {
+    active_period {
+      start: 1653883273
+      end: 1653969540
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "2"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "7"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "12"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "9"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "1"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "8"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "4"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "10"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "3"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "6"
+    }
+    header_text {
+      translation {
+        text: "Trains run on a weekend schedule on Memorial Day"
+        language: "en"
+      }
+      translation {
+        text: "Trains run on a weekend schedule on Memorial Day"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: ""
+        language: "en"
+      }
+      translation {
+        text: "<p style=\"min-height:10px\"></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4237"
+  alert {
+    active_period {
+      start: 1653843600
+      end: 1653867942
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "5"
+    }
+    header_text {
+      translation {
+        text: "Trains run on a Saturday schedule"
+        language: "en"
+      }
+      translation {
+        text: "Trains run on a Saturday schedule"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The Sunday afternoon 1:23 PM, 4:00 PM, and 6:37 PM westbound trains from Montauk, and the 3:23 PM westbound train from Southampton, will not run.\nThese trains will instead run on Monday, May 30."
+        language: "en"
+      }
+      translation {
+        text: "<p>The Sunday afternoon <strong>1:23 PM</strong>, <strong>4:00 PM</strong>, and <strong>6:37 PM</strong> westbound trains from Montauk, and the <strong>3:23 PM</strong> westbound train from Southampton, will not run.</p><p>These trains will instead run on Monday, May 30.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:3594"
+  alert {
+    active_period {
+      start: 1652634000
+      end: 1653080400
+    }
+    active_period {
+      start: 1653102000
+      end: 1653134400
+    }
+    active_period {
+      start: 1653177600
+      end: 1653739200
+    }
+    active_period {
+      start: 1653782400
+      end: 1653825600
+    }
+    active_period {
+      start: 1653879600
+      end: 1653912000
+    }
+    active_period {
+      start: 1653955200
+      end: 1654344000
+    }
+    active_period {
+      start: 1654387200
+      end: 1654948800
+    }
+    active_period {
+      start: 1654992000
+      end: 1655553600
+    }
+    active_period {
+      start: 1655596800
+      end: 1655640000
+    }
+    active_period {
+      start: 1655683200
+      end: 1656158400
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "11"
+    }
+    header_text {
+      translation {
+        text: "Event service only"
+        language: "en"
+      }
+      translation {
+        text: "Event service only"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Trains only run to Belmont Park station when there are events at UBS Arena or Belmont Park."
+        language: "en"
+      }
+      translation {
+        text: "<p>Trains only run to Belmont Park station when there are events at <a target=\"_blank\" href=\"https://new.mta.info/agency/long-island-rail-road/take-the-train-to-the-game/lirr-service-to-ubs-arena\" rel=\"noopener noreferrer nofollow\">UBS Arena</a> or Belmont Park.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:3383"
+  alert {
+    active_period {
+      start: 1648440000
+      end: 1669334400
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "10"
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "4"
+    }
+    header_text {
+      translation {
+        text: "At Mineola, you must be in the first eight cars to exit eastbound trains and the last eight cars to exit westbound trains"
+        language: "en"
+      }
+      translation {
+        text: "At Mineola, you must be in the first eight cars to exit eastbound trains and the last eight cars to exit westbound trains"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The temporary platforms at the west end of the station are now closed and the eastern eight cars of both platforms have reopened, as renovation work continues as part of the LIRR Expansion Project.\n\nThe ticket vending machines on the south side of the station are now located east of 3rd Ave.\n\nView a map of the station here"
+        language: "en"
+      }
+      translation {
+        text: "<p>The temporary platforms at the west end of the station are now closed and the eastern eight cars of both platforms have reopened, as renovation work continues as part of the LIRR Expansion Project.</p><p style=\"min-height:10px\"></p><p>The ticket vending machines on the south side of the station are now located east of 3rd Ave.</p><p style=\"min-height:10px\"></p><p><a title=\"\" target=\"_blank\" href=\"https://new.mta.info/sites/default/files/2022-03/Mineola%20Station%20-%20LIRR%20Expansion%20Update%20-MAP.png\" rel=\"noopener noreferrer nofollow\">View a map of the station here</a></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:2841"
+  alert {
+    active_period {
+      start: 1643619600
+      end: 1669334400
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "10"
+    }
+    header_text {
+      translation {
+        text: "You must be in the first six cars to exit at Westbury"
+        language: "en"
+      }
+      translation {
+        text: "You must be in the first six cars to exit at Westbury"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The temporary platforms at the east end of the station are now closed and the western six cars of both platforms have reopened, as renovation work continues as part of the LIRR Expansion Project.\n\nThe pedestrian underpass has also reopened, but the station building remains closed until later this year."
+        language: "en"
+      }
+      translation {
+        text: "<p>The temporary platforms at the east end of the station are now closed and the western six cars of both platforms have reopened, as renovation work continues as part of the LIRR Expansion Project.</p><p style=\"min-height:10px\"></p><p>The pedestrian underpass has also reopened, but the station building remains closed until later this year.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:2037"
+  alert {
+    active_period {
+      start: 1630987200
+      end: 1669334400
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "10"
+    }
+    header_text {
+      translation {
+        text: "You must be in the last eight cars to exit at Huntington"
+        language: "en"
+      }
+      translation {
+        text: "You must be in the last eight cars to exit at Huntington"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The east end of both station platforms is closed while the Town of Huntington replaces the eastern pedestrian overpass. When complete, the new enclosed overpass will feature glass panel walls, brighter LED lighting, and CCTV security cameras.\n\nClick here to see a map of the station."
+        language: "en"
+      }
+      translation {
+        text: "<p>The east end of both station platforms is closed while the Town of Huntington replaces the eastern pedestrian overpass. When complete, the new enclosed overpass will feature glass panel walls, brighter LED lighting, and CCTV security cameras.</p><p style=\"min-height:10px\"></p><p><a title=\"\" target=\"_blank\" href=\"https://new.mta.info/sites/default/files/styles/lightbox/public/2021-08/August%2030%20Huntington.jpg\" rel=\"noopener noreferrer nofollow\">Click here to see a map of the station.</a></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:2036"
+  alert {
+    active_period {
+      start: 1629777600
+      end: 1654833600
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "12"
+    }
+    header_text {
+      translation {
+        text: "Elevator to Tracks 20/21 at Penn Station closed"
+        language: "en"
+      }
+      translation {
+        text: "Elevator to Tracks 20/21 at Penn Station closed<br/>"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "We are replacing the elevator as part of the Penn Station LIRR Concourse project. Customers with disabilities may use a chair lift that has been installed on the staircase closest to the ticket office. When you arrive at the lift, please push the attendant call button for assistance.\n\nClick here to see a map of the concourse."
+        language: "en"
+      }
+      translation {
+        text: "<p>We are replacing the elevator as part of the Penn Station LIRR Concourse project. Customers with disabilities may use a chair lift that has been installed on the staircase closest to the ticket office. When you arrive at the lift, please push the attendant call button for assistance.</p><p style=\"min-height:10px\"></p><p><a title=\"\" target=\"_blank\" href=\"https://new.mta.info/sites/default/files/styles/lightbox/public/2021-08/LIRR%20Concourse_ExistingBasemap-01_0.png\" rel=\"noopener noreferrer nofollow\">Click here to see a map of the concourse.</a></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:1132"
+  alert {
+    active_period {
+      start: 1632110400
+      end: 1669334400
+    }
+    informed_entity {
+      agency_id: "LI"
+      route_id: "9"
+    }
+    header_text {
+      translation {
+        text: "All trains stop at Mets-Willets Point"
+        language: "en"
+      }
+      translation {
+        text: "All trains stop at Mets-Willets Point"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "We are making it easier to reach NYC\'s COVID-19 vaccination site at Citi Field."
+        language: "en"
+      }
+      translation {
+        text: "<p>We are making it easier to reach NYC\'s COVID-19 vaccination site at Citi Field.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}

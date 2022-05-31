@@ -259,6 +259,5 @@ train1.get("A51", "N", 1)
 train2.get("A51", "S", 1)
 ferry1.get("90", 1)
 
-sorted = sort([train1, train2, ferry1])
-print(sorted)
+sort([train1, train2, ferry1])
 ```

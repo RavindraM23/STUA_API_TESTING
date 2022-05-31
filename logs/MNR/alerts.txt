@@ -1,0 +1,899 @@
+header {
+  gtfs_realtime_version: "2.0"
+  incrementality: FULL_DATASET
+  timestamp: 1653845187
+  [nyct_feed_header] {
+    nyct_subway_version: "1.0"
+  }
+}
+entity {
+  id: "lmm:alert:151221"
+  alert {
+    active_period {
+      start: 1653843130
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "1"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "51"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "46"
+    }
+    header_text {
+      translation {
+        text: "Service is delayed by up to 35 minutes because of single-tracking between Poughkeepsie and Beacon."
+        language: "en"
+      }
+      translation {
+        text: "<p>Service is delayed by up to 35 minutes because of single-tracking between <b>Poughkeepsie</b> and <b>Beacon</b>.</p>"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The single-tracking is the result of an earlier train striking a person near New Hamburg."
+        language: "en"
+      }
+      translation {
+        text: "<p>The single-tracking is the result of an earlier train striking a person near New Hamburg.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4465"
+  alert {
+    active_period {
+      start: 1654921800
+      end: 1655089200
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "51"
+    }
+    header_text {
+      translation {
+        text: "No trains between Port Jervis and Suffern\nBuses run between most stations and Ramsey Route 17"
+        language: "en"
+      }
+      translation {
+        text: "No trains between Port Jervis and Suffern<br/>Buses run between most stations and Ramsey Route 17"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "Express buses will serve all stops between Port Jervis and Sloatsburg, except Otisville and Salisbury Mills, and connect with trains at Ramsey Route 17.\nLocal buses will run in a continuous loop between Port Jervis and Ramsey Route 17 for those traveling solely within Orange and Rockland counties. These buses will not connect to trains.\n\nOnly local buses will stop at Otisville and Salisbury Mills. Use Middletown or Harriman stations instead for travel to Hoboken and New York.\n\nPlease check your destination when boarding buses."
+        language: "en"
+      }
+      translation {
+        text: "<p>Express buses will serve all stops between Port Jervis and Sloatsburg, <strong>except Otisville and Salisbury Mills</strong>, and connect with trains at Ramsey Route 17.</p><p>Local buses will run in a continuous loop between Port Jervis and Ramsey Route 17 for those traveling solely within Orange and Rockland counties. These buses will not connect to trains.</p><p style=\"min-height:10px\"></p><p>Only local buses will stop at Otisville and Salisbury Mills. Use Middletown or Harriman stations instead for travel to Hoboken and New York.</p><p style=\"min-height:10px\"></p><p>Please check your destination when boarding buses.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4254"
+  alert {
+    active_period {
+      start: 1653897600
+      end: 1653976800
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "51"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "50"
+    }
+    header_text {
+      translation {
+        text: "Trains run on a weekend schedule on Memorial Day"
+        language: "en"
+      }
+      translation {
+        text: "Trains run on a weekend schedule on Memorial Day"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "An extra train will depart Port Jervis at 4:05 PM and make all stops to Suffern, then run non-stop to Secaucus (6:12 PM) and Hoboken (6:24 PM)."
+        language: "en"
+      }
+      translation {
+        text: "<p>An extra train will depart Port Jervis at 4:05 PM and make all stops to Suffern, then run non-stop to Secaucus (6:12 PM) and Hoboken (6:24 PM).</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:4253"
+  alert {
+    active_period {
+      start: 1653897600
+      end: 1653976800
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "6"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "wassaic"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "4"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "5"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "3"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "1"
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "2"
+    }
+    header_text {
+      translation {
+        text: "Trains run on a Sunday schedule on Memorial Day"
+        language: "en"
+      }
+      translation {
+        text: "Trains run on a Sunday schedule on Memorial Day"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: ""
+        language: "en"
+      }
+      translation {
+        text: "<p style=\"min-height:10px\"></p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:3803"
+  alert {
+    active_period {
+      start: 1652705400
+      end: 1652727600
+    }
+    active_period {
+      start: 1652791800
+      end: 1652814000
+    }
+    active_period {
+      start: 1652878200
+      end: 1652900400
+    }
+    active_period {
+      start: 1652964600
+      end: 1652986800
+    }
+    active_period {
+      start: 1653051000
+      end: 1653073200
+    }
+    active_period {
+      start: 1653310200
+      end: 1653332400
+    }
+    active_period {
+      start: 1653396600
+      end: 1653418800
+    }
+    active_period {
+      start: 1653483000
+      end: 1653505200
+    }
+    active_period {
+      start: 1653569400
+      end: 1653591600
+    }
+    active_period {
+      start: 1653655800
+      end: 1653678000
+    }
+    active_period {
+      start: 1654001400
+      end: 1654023600
+    }
+    active_period {
+      start: 1654087800
+      end: 1654110000
+    }
+    active_period {
+      start: 1654174200
+      end: 1654196400
+    }
+    active_period {
+      start: 1654260600
+      end: 1654282800
+    }
+    active_period {
+      start: 1654519800
+      end: 1654542000
+    }
+    active_period {
+      start: 1654606200
+      end: 1654628400
+    }
+    active_period {
+      start: 1654692600
+      end: 1654714800
+    }
+    active_period {
+      start: 1654779000
+      end: 1654801200
+    }
+    active_period {
+      start: 1654865400
+      end: 1654887600
+    }
+    active_period {
+      start: 1655124600
+      end: 1655146800
+    }
+    active_period {
+      start: 1655211000
+      end: 1655233200
+    }
+    active_period {
+      start: 1655297400
+      end: 1655319600
+    }
+    active_period {
+      start: 1655383800
+      end: 1655406000
+    }
+    active_period {
+      start: 1655470200
+      end: 1655492400
+    }
+    active_period {
+      start: 1655729400
+      end: 1655751600
+    }
+    active_period {
+      start: 1655815800
+      end: 1655838000
+    }
+    active_period {
+      start: 1655902200
+      end: 1655924400
+    }
+    active_period {
+      start: 1655988600
+      end: 1656010800
+    }
+    active_period {
+      start: 1656075000
+      end: 1656097200
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "50"
+    }
+    header_text {
+      translation {
+        text: "Buses replace trains between Spring Valley and Secaucus Junction"
+        language: "en"
+      }
+      translation {
+        text: "Buses replace trains between Spring Valley and Secaucus Junction"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The first trains to be bused are the 8:50 AM from Spring Valley and the 8:56 AM from Hoboken. Service resumes each day with the 3:00 PM from Hoboken and the 3:50 PM from Spring Valley.\n\nDownload the bus schedule here. Transfers may be required for local travel between Spring Valley and Wood-Ridge."
+        language: "en"
+      }
+      translation {
+        text: "<p>The first trains to be bused are the 8:50 AM from Spring Valley and the 8:56 AM from Hoboken. Service resumes each day with the 3:00 PM from Hoboken and the 3:50 PM from Spring Valley.</p><p style=\"min-height:10px\"></p><p><a title=\"\" target=\"_blank\" href=\"https://d2g63oyneaimm8.cloudfront.net/sites/default/files/REVISED3%20PV-WKDY%20during%20busing%20-%20042522.pdf\" rel=\"noopener noreferrer nofollow\">Download the bus schedule here</a>. Transfers may be required for local travel between Spring Valley and Wood-Ridge.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "lmm:planned_work:3271"
+  alert {
+    active_period {
+      start: 1646025300
+      end: 1669334400
+    }
+    informed_entity {
+      agency_id: "MNR"
+      route_id: "2"
+    }
+    header_text {
+      translation {
+        text: "You may need to move to a different car to exit at North White Plains station"
+        language: "en"
+      }
+      translation {
+        text: "You may need to move to a different car to exit at North White Plains station"
+        language: "en-html"
+      }
+    }
+    description_text {
+      translation {
+        text: "The south section of the station platforms will be closed for repairs through Spring 2022, so only six cars will platform on some trains. Please listen for train crew instructions to determine if you can exit from your car.\n\nConsider making transfers at White Plains station instead."
+        language: "en"
+      }
+      translation {
+        text: "<p>The south section of the station platforms will be closed for repairs through Spring 2022, so only six cars will platform on some trains. Please listen for train crew instructions to determine if you can exit from your car.</p><p style=\"min-height:10px\"></p><p>Consider making transfers at <strong>White Plains</strong> station instead.</p>"
+        language: "en-html"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_gUnhJ2wfgqFIZ+7zcYGk7Q=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "83"
+    }
+    header_text {
+      translation {
+        text: "Elevator from the overpass to the island platform (Tracks 2 & 1). Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Elevator from the overpass to the island platform (Tracks 2 & 1). Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_6iri+Gpb1Vydy7vCuNYuig=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "128"
+    }
+    header_text {
+      translation {
+        text: "Elevator from the street to the New Haven-bound platform (Track 4). Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Elevator from the street to the New Haven-bound platform (Track 4). Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_ytNKbSKX0OztcMtEZzdbZw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "128"
+    }
+    header_text {
+      translation {
+        text: " Elevator from the street to the New York-bound platform (Track 3). Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: " Elevator from the street to the New York-bound platform (Track 3). Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_RNuBu4JmqQtibwf1wZ6dlA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At 47th Street & Madison Avenue in the 47th street Cross Passage. Elevator NE-1 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At 47th Street & Madison Avenue in the 47th street Cross Passage. Elevator NE-1 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_cBB1P1EyhGWPKQeUIgbxHQ=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At the 47th street Cross Passage in the Northwest Passage. Elevator NE-2 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At the 47th street Cross Passage in the Northwest Passage. Elevator NE-2 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_nrkZQiBL6ps3gZAWRkA+LA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At the 47th street Cross Passage in the Northeast Passage. Elevator NE-3 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At the 47th street Cross Passage in the Northeast Passage. Elevator NE-3 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_YA+2kDEGByapG3et/VaEQg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "On the west side of the Terminal at the entrance to the Transit Museum. Escalator 1 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "On the west side of the Terminal at the entrance to the Transit Museum. Escalator 1 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_a5CgX+uNlHYn8TckN5sREA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At the 45th street Cross Passage in the Northwest Passage. Escalator 10 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At the 45th street Cross Passage in the Northwest Passage. Escalator 10 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_PgH6QkGq/Rq/j20yGxBvDA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At 47th street & Madison Avenue in the 47th street Cross Passage. Escalator 11 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At 47th street & Madison Avenue in the 47th street Cross Passage. Escalator 11 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_6rY8nXHx35NYDjD9/lDSSw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "On the west side of the Terminal at the entrance to the Transit Museum. Escalator 2 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "On the west side of the Terminal at the entrance to the Transit Museum. Escalator 2 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_nhNvpkCJFQDoq2iVk57KOw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At the 45th street Cross Passage in the Northeast Passage. Escalator 7 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At the 45th street Cross Passage in the Northeast Passage. Escalator 7 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_Fkv4tveZJ9ns3MsUtaIRZA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "1"
+    }
+    header_text {
+      translation {
+        text: "At 48th street and Park Avenue in the Northeast Passage. Escalator 9 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "At 48th street and Park Avenue in the Northeast Passage. Escalator 9 Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_myF9QX9H/Bo0U7reFNs2pg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "116"
+    }
+    header_text {
+      translation {
+        text: "Elevator from the New Haven-bound platform (Track 4) to the overpass Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Elevator from the New Haven-bound platform (Track 4) to the overpass Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_l0kDhFmA1vavir5jIAcvNg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 01 - Up from lower level to landing Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 01 - Up from lower level to landing Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_m5FZp8x/iFlmxvtJ3Ibbpg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 02 - Up from landing to track 5 platform Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 02 - Up from landing to track 5 platform Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_UG7Rgku3ItouE1KBwMPqiw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 03 - Up from track 5 platform to landing Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 03 - Up from track 5 platform to landing Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_5L+3cPpo4AWR7pzkdmbYhA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 04 -  Up from landing to concourse (Java Joe\'s) Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 04 -  Up from landing to concourse (Java Joe\'s) Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_yii3Y7KjX0xqIRkOG4yUEw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 05 - Down from landing to lower level Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 05 - Down from landing to lower level Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_9ouZ08lW+HDSqimIjySiBg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 06 - Down from track 5 platform to landing Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 06 - Down from track 5 platform to landing Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_5ks/SWIekYw4HB+uDLgR2w=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 07 - Down from landing to the track 5 platform Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 07 - Down from landing to the track 5 platform Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_ihqTxfNRu/fxNr6AmffvMw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 08 - Down from concourse (Java Joe\'s) to landing Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 08 - Down from concourse (Java Joe\'s) to landing Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_7HTSo2F3AFgC/O0+oEmbUA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 11 - Down from concourse to Track 3/5 center island platform Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 11 - Down from concourse to Track 3/5 center island platform Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_tDYLcT3D+oMSm9POUWNveg=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "124"
+    }
+    header_text {
+      translation {
+        text: "Escalator 10 - Up from Track 3/5 center island platform to concourse Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator 10 - Up from Track 3/5 center island platform to concourse Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_P0KlAiMDcg3hYJ5aq3beWw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "134"
+    }
+    header_text {
+      translation {
+        text: "Elevator from the New York-bound platform (Tk 3) to street level to underpass is located on the west end of platform Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Elevator from the New York-bound platform (Tk 3) to street level to underpass is located on the west end of platform Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_IO6Vwr9luFPHfVkhFZJ9uw=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "74"
+    }
+    header_text {
+      translation {
+        text: "Escalator South End of Station Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: "Escalator South End of Station Out of service."
+        language: "en"
+      }
+    }
+  }
+}
+entity {
+  id: "MNR_eTYTQMZebTmE+HTg/KS9uA=="
+  alert {
+    informed_entity {
+      agency_id: "MNR"
+      stop_id: "622"
+    }
+    header_text {
+      translation {
+        text: " Elevator from station mezzanine to tracks 2,1 platform PE3 Out of service."
+        language: "en"
+      }
+    }
+    description_text {
+      translation {
+        text: " Elevator from station mezzanine to tracks 2,1 platform PE3 Out of service."
+        language: "en"
+      }
+    }
+  }
+}

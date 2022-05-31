@@ -1,4 +1,5 @@
 client.py
 __pycache__
 .env
-logs
+readme.md
+stua.ipynb
