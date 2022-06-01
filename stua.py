@@ -347,7 +347,7 @@ def convertBus(input):
     if (type(input) == type(0)):
         input = str(input)
     responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{input}.xml?key={_getAPIBUSTIME()}')
-    filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+    filenamevar = f"bustimeconvert.xml"
     with open(filenamevar,"wb") as f:
         f.write(responsestop.content)
     tree = ET.parse(filenamevar)
@@ -420,8 +420,10 @@ def convertFerry(input):
 
 def _url():
     link = []
+    '''
     with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write("")
+    '''
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-si')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm')
@@ -441,8 +443,10 @@ def _transitSubway(stop, direction, responses, API):
         response = requests.get(link, headers={'x-api-key' : API})
         feed = gtfs_realtime_pb2.FeedMessage()
         feed.ParseFromString(response.content)
+        '''
         with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
             test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+        '''
         for entity in feed.entity:
             for update in entity.trip_update.stop_time_update:
                 if (update.stop_id == stop+direction):
@@ -477,9 +481,10 @@ def _transitSubway(stop, direction, responses, API):
     except:
         return "NO TRAINS"
         #print(times)
-
+    '''
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
     return times
 
 def _transitBus(stop, direction, responses, API):
@@ -489,8 +494,10 @@ def _transitBus(stop, direction, responses, API):
     response = requests.get(f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={API}")
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
+    '''
     with open(f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    '''
  
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
@@ -514,7 +521,7 @@ def _transitBus(stop, direction, responses, API):
                 stop_id = update.stop_id
            
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
-                filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+                filenamevar = f"bustime.xml"
          
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
@@ -525,8 +532,8 @@ def _transitBus(stop, direction, responses, API):
                     if (item[1].text == route_id):
                         service_pattern = item[3].text
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
-                filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-               
+                #filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+                filenamevar = f"bustime.xml"
                 with open(filenamevar,"wb") as f:
                     f.write(responsestop.content)
                 tree = ET.parse(filenamevar)
@@ -540,9 +547,10 @@ def _transitBus(stop, direction, responses, API):
         times = times[responses-1]
     except:
         return "NO BUSES"
-
+    '''
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
     return times 
 
 def  _transitLIRR(stop, direction, responses, API):
@@ -553,8 +561,10 @@ def  _transitLIRR(stop, direction, responses, API):
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/lirr%2Fgtfs-lirr", headers={'x-api-key' : API})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
+    '''
     with open(f"logs/LIRR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    '''
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
             if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
@@ -598,9 +608,10 @@ def  _transitLIRR(stop, direction, responses, API):
     except:
         return "NO TRAINS"
         #print(times)
-
+    '''
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
     return times 
 
 def  _transitMNR(stop, direction, responses, API):
@@ -611,8 +622,10 @@ def  _transitMNR(stop, direction, responses, API):
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-mnr", headers={'x-api-key' : API})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
+    '''
     with open(f"logs/MNR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    '''
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
             if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
@@ -656,9 +669,10 @@ def  _transitMNR(stop, direction, responses, API):
     except:
         return "NO TRAINS"
         #print(times)
-
+    '''
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
     return times 
 
 def _transitFerry(stop, responses):
@@ -669,8 +683,10 @@ def _transitFerry(stop, responses):
     response = requests.get("http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/tripupdate")
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
+    '''
     with open(f"logs/NYCFerry/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
         test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    '''
     for entity in feed.entity:
         for update in entity.trip_update.stop_time_update:
             #print(update.stop_id)
@@ -719,9 +735,10 @@ def _transitFerry(stop, responses):
     except:
         return "NO FERRIES"
         #print(times)
-
+    '''
     with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
     return times
     
 
@@ -737,7 +754,7 @@ def alertsSubway():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("logs/NYCT_GTFS/alerts.txt","w") as f:
+    with open("alerts.txt","w") as f:
         f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
@@ -753,7 +770,7 @@ def alertsLIRR():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Flirr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("logs/LIRR/alerts.txt","w") as f:
+    with open("alerts.txt","w") as f:
         f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
@@ -769,7 +786,7 @@ def alertsMNR():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fmnr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("logs/MNR/alerts.txt","w") as f:
+    with open("alerts.txt","w") as f:
         f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
@@ -785,7 +802,7 @@ def alertsBus():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fbus-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("logs/Bustime/alerts.txt","w") as f:
+    with open("alerts.txt","w") as f:
         f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
@@ -801,7 +818,7 @@ def alertsFerry():
     response = requests.get("http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/alert")
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("logs/NYCFerry/alerts.txt","w") as f:
+    with open("alerts.txt","w") as f:
         f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
