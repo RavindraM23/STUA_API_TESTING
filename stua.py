@@ -1,6 +1,8 @@
 import requests, csv, datetime, math, os, json, calendar
+import time as te
 from abc import ABC, abstractmethod
-import xml.etree.ElementTree as ET
+#import xml.etree.ElementTree as ET
+from xml.etree.ElementTree import fromstring, ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
 
 APIMTA = ""
@@ -302,6 +304,42 @@ class gtfsFerry(gtfs):
         self.trip_id = trip_id
         self.vehicle = vehicle
 
+class gtfsPATH(gtfs):
+    def __init__(self):
+        self.route = ""
+        self.terminus = ""
+        self.station = "" 
+        self.direction = ""
+        self.time = 0
+        self.status = ""
+
+    def set(self, route, terminus, station, direction, time, status):
+        self.route = ""
+        self.terminus = ""
+        self.station = "" 
+        self.direction = ""
+        self.time = 0
+        self.status = ""
+
+    def get(self, station, responses):
+        _responseIndex(responses)
+        output = _transitPATH(station.lower(), responses)
+        #print(output)
+        if (output == "NO TRAINS"):
+            self.route = "NO TRAINS"
+            self.terminus = "NO TRAINS"
+            self.station = "NO TRAINS" 
+            self.direction = "NO TRAINS"
+            self.time = -1
+            self.status = "NO TRAINS"
+        else:
+            self.route = output[1]
+            self.terminus = output[2]
+            self.station = output[3]
+            self.direction = output[4]
+            self.time = output[0]
+            self.status = output[5]
+
 def _responseIndex(index):
     if (index <= 0):
         raise Exception("INVALID RESPONSES INDEX, MUST BE > 0")
@@ -347,10 +385,7 @@ def convertBus(input):
     if (type(input) == type(0)):
         input = str(input)
     responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{input}.xml?key={_getAPIBUSTIME()}')
-    filenamevar = f"bustimeconvert.xml"
-    with open(filenamevar,"wb") as f:
-        f.write(responsestop.content)
-    tree = ET.parse(filenamevar)
+    tree = ET(fromstring(responsestop.content))
     root = tree.getroot()
     stop_name = root[4][4].text
     return stop_name
@@ -521,11 +556,12 @@ def _transitBus(stop, direction, responses, API):
                 stop_id = update.stop_id
            
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
-                filenamevar = f"bustime.xml"
+                #filenamevar = f"bustime.xml"
          
-                with open(filenamevar,"wb") as f:
-                    f.write(responsestop.content)
-                tree = ET.parse(filenamevar)
+                #with open(filenamevar,"wb") as f:
+                #    f.write(responsestop.content)
+                tree = ET(fromstring(responsestop.content))
+                # tree = ET.parse(filenamevar)
                 root = tree.getroot()
                 stop_name = root[4][4].text
                 for item in root[4][7]:
@@ -533,10 +569,10 @@ def _transitBus(stop, direction, responses, API):
                         service_pattern = item[3].text
                 responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
                 #filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-                filenamevar = f"bustime.xml"
-                with open(filenamevar,"wb") as f:
-                    f.write(responsestop.content)
-                tree = ET.parse(filenamevar)
+                #filenamevar = f"bustime.xml"
+                tree = ET(fromstring(responsestop.content))
+                # tree = ET.parse(filenamevar)
+                root = tree.getroot()
                 root = tree.getroot()
                 terminus_name = root[4][4].text
                
@@ -740,6 +776,40 @@ def _transitFerry(stop, responses):
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     '''
     return times
+
+def _transitPATH(stop, responses):
+    current_time = datetime.datetime.now()
+    times = []
+    #print(API)
+    response = requests.get(f"https://path.api.razza.dev/v1/stations/{stop}/realtime")
+    feed = json.loads(response.content)
+    '''
+    with open(f"logs/NYCFerry/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
+        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
+    '''
+    for entity in feed["upcomingTrains"]:
+        route = entity["route"]
+        terminus = entity["headsign"]
+        station = (stop.lower()).capitalize() 
+        direction = entity["direction"]
+        timestamp = te.strptime(entity["projectedArrival"], "%Y-%m-%dT%H:%M:%SZ")
+        unix_time_utc = calendar.timegm(timestamp)
+        time = datetime.datetime.fromtimestamp(unix_time_utc)
+        time = math.trunc(((time - current_time).total_seconds()) / 60)
+        status = entity["status"]
+        times.append([time, route, terminus, station, direction, status])
+
+    times.sort()
+    try:
+        times = times[responses-1]
+    except:
+        return "NO TRAINS"
+        #print(times)
+    '''
+    with open(f"logs/Print/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","a") as test:
+        test.write(str(times)+ f" {datetime.datetime.now()}\n")
+    '''
+    return times
     
 
 def _routes(service):
@@ -754,8 +824,6 @@ def alertsSubway():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fsubway-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("alerts.txt","w") as f:
-        f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
             if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
@@ -770,8 +838,6 @@ def alertsLIRR():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Flirr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("alerts.txt","w") as f:
-        f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
             if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
@@ -786,8 +852,6 @@ def alertsMNR():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fmnr-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("alerts.txt","w") as f:
-        f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
             if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
@@ -802,8 +866,6 @@ def alertsBus():
     response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/camsys%2Fbus-alerts", headers={'x-api-key' : _getAPIMTA()})
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("alerts.txt","w") as f:
-        f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
             if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
@@ -818,8 +880,6 @@ def alertsFerry():
     response = requests.get("http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/alert")
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(response.content)
-    with open("alerts.txt","w") as f:
-        f.write(str(feed))
     for entity in feed.entity:
         for start in entity.alert.active_period:
             if int(start.start) < calendar.timegm((datetime.datetime.utcnow()).utctimetuple()) < int(start.end):     
