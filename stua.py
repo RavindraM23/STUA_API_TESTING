@@ -1,9 +1,11 @@
+import aiohttp, asyncio
+import ray
 import requests, csv, datetime, math, os, json, calendar
 import time as te
 from abc import ABC, abstractmethod
-#import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import fromstring, ElementTree as ET
 import gtfs_realtime_pb2, nyct_subway_pb2
+
 
 APIMTA = ""
 APIBUSTIME = ""
@@ -453,12 +455,36 @@ def convertFerry(input):
     else:
         return output
 
+async def _requestMTA(session, url, API):
+    async with session.get(url, headers={'x-api-key' : API}) as response:
+        data = await response.read()
+    return data
+
+async def _requestFeedMTA(sites, API):
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for url in sites:
+            task = asyncio.ensure_future(_requestMTA(session, url, API))
+            tasks.append(task)
+        out = await asyncio.gather(*tasks, return_exceptions=True)
+        return out
+
+async def _requestBustime(session, url):
+    async with session.get(url) as response:
+        data = await response.read()
+    return data
+
+async def _requestFeedBustime(sites):
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for url in sites:
+            task = asyncio.ensure_future(_requestBustime(session, url))
+            tasks.append(task)
+        out = await asyncio.gather(*tasks, return_exceptions=True)
+        return out
+
 def _url():
     link = []
-    '''
-    with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
-        test.write("")
-    '''
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-si')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace')
     link.append('https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm')
@@ -473,16 +499,20 @@ def _transitSubway(stop, direction, responses, API):
     times = []
     destination = []
     current_time = datetime.datetime.now()
-    links = _url()
+    links = asyncio.get_event_loop().run_until_complete(_requestFeedMTA(_url(), API))
+
     for link in links:
-        response = requests.get(link, headers={'x-api-key' : API})
         feed = gtfs_realtime_pb2.FeedMessage()
-        feed.ParseFromString(response.content)
+        feed.ParseFromString(link)
+        
         '''
         with open(f"logs/NYCT_GTFS/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
             test.write(str(feed)+ f" {datetime.datetime.now()}\n")
         '''
+        #print(str(feed))
+        
         for entity in feed.entity:
+            #print(entity)
             for update in entity.trip_update.stop_time_update:
                 if (update.stop_id == stop+direction):
                     station_id = update.stop_id[:-1]
@@ -503,14 +533,11 @@ def _transitSubway(stop, direction, responses, API):
                     terminus_id = destination[-1]
                 
                     #print(stop)
-
                     times.append([time, route_id, terminus_id, station_id, direction, trip_id])
-                    #print(data["gtfs"]["stops"])
-                    #for i in data["gtfs"]["stops"]:
-                    #print(i["stop_id"] + " " + i["stop_name"])
+
+    #print(times)
     times.sort()
     #times = []
-    #print(times)
     try:
         times = times[responses-1]
     except:
@@ -521,63 +548,61 @@ def _transitSubway(stop, direction, responses, API):
         test.write(str(times)+ f" {datetime.datetime.now()}\n")
     '''
     return times
+    
 
 def _transitBus(stop, direction, responses, API):
     current_time = datetime.datetime.now()
     times = []
     destination = []
-    response = requests.get(f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={API}")
-    feed = gtfs_realtime_pb2.FeedMessage()
-    feed.ParseFromString(response.content)
-    '''
-    with open(f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
-        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
-    '''
+    links = asyncio.get_event_loop().run_until_complete(_requestFeedBustime([f"http://gtfsrt.prod.obanyc.com/tripUpdates?key={API}"]))
+    for link in links:
+        feed = gtfs_realtime_pb2.FeedMessage()
+        feed.ParseFromString(link)
  
-    for entity in feed.entity:
-        for update in entity.trip_update.stop_time_update:
-       
-            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
-         
-                time = update.arrival.time
-                if (time < 0):
-                    time = update.departure.time
-                time = datetime.datetime.fromtimestamp(time)
-                time = math.trunc(((time - current_time).total_seconds()) / 60)
-                if (time < 0):
-                    continue 
-                trip_id = entity.trip_update.trip.trip_id
-                route_id = entity.trip_update.trip.route_id
-                vehicle = entity.trip_update.vehicle.id[-4:]
-                for update in entity.trip_update.stop_time_update:
-                    destination.append(update.stop_id)
-                terminus_id = destination[-1]
-                direction = entity.trip_update.trip.direction_id
-                stop_id = update.stop_id
-           
-                responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
-                #filenamevar = f"bustime.xml"
-         
-                #with open(filenamevar,"wb") as f:
-                #    f.write(responsestop.content)
-                tree = ET(fromstring(responsestop.content))
-                # tree = ET.parse(filenamevar)
-                root = tree.getroot()
-                stop_name = root[4][4].text
-                for item in root[4][7]:
-                    if (item[1].text == route_id):
-                        service_pattern = item[3].text
-                responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
-                #filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
-                #filenamevar = f"bustime.xml"
-                tree = ET(fromstring(responsestop.content))
-                # tree = ET.parse(filenamevar)
-                root = tree.getroot()
-                root = tree.getroot()
-                terminus_name = root[4][4].text
-               
-                times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id, vehicle])
+        for entity in feed.entity:
+            for update in entity.trip_update.stop_time_update:
+        
+                if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
+            
+                    time = update.arrival.time
+                    if (time < 0):
+                        time = update.departure.time
+                    time = datetime.datetime.fromtimestamp(time)
+                    time = math.trunc(((time - current_time).total_seconds()) / 60)
+                    if (time < 0):
+                        continue 
+                    trip_id = entity.trip_update.trip.trip_id
+                    route_id = entity.trip_update.trip.route_id
+                    vehicle = entity.trip_update.vehicle.id[-4:]
+                    for update in entity.trip_update.stop_time_update:
+                        destination.append(update.stop_id)
+                    terminus_id = destination[-1]
+                    direction = entity.trip_update.trip.direction_id
+                    stop_id = update.stop_id
+            
+                    responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{stop}.xml?key={API}')
+                    #filenamevar = f"bustime.xml"
+            
+                    #with open(filenamevar,"wb") as f:
+                    #    f.write(responsestop.content)
+                    tree = ET(fromstring(responsestop.content))
+                    # tree = ET.parse(filenamevar)
+                    root = tree.getroot()
+                    stop_name = root[4][4].text
+                    for item in root[4][7]:
+                        if (item[1].text == route_id):
+                            service_pattern = item[3].text
+                    responsestop = requests.get(f'http://bustime.mta.info/api/where/stop/MTA_{terminus_id}.xml?key={API}')
+                    #filenamevar = f"logs/Bustime/{(datetime.datetime.now()).strftime('%d%m%Y')}.xml"
+                    #filenamevar = f"bustime.xml"
+                    tree = ET(fromstring(responsestop.content))
+                    # tree = ET.parse(filenamevar)
+                    root = tree.getroot()
+                    root = tree.getroot()
+                    terminus_name = root[4][4].text
                 
+                    times.append([time, route_id, terminus_id, stop_id, stop_name, terminus_name, direction, service_pattern, trip_id, vehicle])
+                    
     times.sort()
     try:
         times = times[responses-1]
@@ -594,48 +619,48 @@ def  _transitLIRR(stop, direction, responses, API):
     times = []
     destination = []
     #print(API)
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/lirr%2Fgtfs-lirr", headers={'x-api-key' : API})
-    feed = gtfs_realtime_pb2.FeedMessage()
-    feed.ParseFromString(response.content)
-    '''
-    with open(f"logs/LIRR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
-        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
-    '''
-    for entity in feed.entity:
-        for update in entity.trip_update.stop_time_update:
-            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
-                station_id = update.stop_id
-                time = update.arrival.time
-                if (time < 0):
-                    time = update.departure.time
-                time = datetime.datetime.fromtimestamp(time)
-                time = math.trunc(((time - current_time).total_seconds()) / 60)
-                #print(time)
-                if (time < 0):
-                    continue 
-                if entity.trip_update.trip.trip_id[-2] == "_":
-                    vehicle = entity.trip_update.trip.trip_id
-                    vehicle = vehicle.replace("_","")
-                    vehicle = entity.trip_update.trip.trip_id[-6:-2]
-                else:
-                    vehicle = entity.trip_update.trip.trip_id[-4:]
-                trip_id = entity.trip_update.trip.trip_id
-                route_id = entity.trip_update.trip.route_id
-                direction = entity.trip_update.trip.direction_id
-                station_id_list = []
-                for update in entity.trip_update.stop_time_update:
-                    destination.append(update.stop_id)
-                    station_id_list.append(update.stop_id)
-                #print(service_description)
-                station_stop_list = [convertLIRR(i) for i in station_id_list]
-                terminus_id = destination[-1]
-            
-                #print(stop)
+    links = asyncio.get_event_loop().run_until_complete(_requestFeedMTA(_url(["https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-lirr"]), API))
+    
+    for link in links:
+    
+        feed = gtfs_realtime_pb2.FeedMessage()
+        feed.ParseFromString(link)
+        
+        for entity in feed.entity:
+            for update in entity.trip_update.stop_time_update:
+                if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
+                    station_id = update.stop_id
+                    time = update.arrival.time
+                    if (time < 0):
+                        time = update.departure.time
+                    time = datetime.datetime.fromtimestamp(time)
+                    time = math.trunc(((time - current_time).total_seconds()) / 60)
+                    #print(time)
+                    if (time < 0):
+                        continue 
+                    if entity.trip_update.trip.trip_id[-2] == "_":
+                        vehicle = entity.trip_update.trip.trip_id
+                        vehicle = vehicle.replace("_","")
+                        vehicle = entity.trip_update.trip.trip_id[-6:-2]
+                    else:
+                        vehicle = entity.trip_update.trip.trip_id[-4:]
+                    trip_id = entity.trip_update.trip.trip_id
+                    route_id = entity.trip_update.trip.route_id
+                    direction = entity.trip_update.trip.direction_id
+                    station_id_list = []
+                    for update in entity.trip_update.stop_time_update:
+                        destination.append(update.stop_id)
+                        station_id_list.append(update.stop_id)
+                    #print(service_description)
+                    station_stop_list = [convertLIRR(i) for i in station_id_list]
+                    terminus_id = destination[-1]
+                
+                    #print(stop)
 
-                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
-                #print(data["gtfs"]["stops"])
-                #for i in data["gtfs"]["stops"]:
-                #print(i["stop_id"] + " " + i["stop_name"])
+                    times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
+                    #print(data["gtfs"]["stops"])
+                    #for i in data["gtfs"]["stops"]:
+                    #print(i["stop_id"] + " " + i["stop_name"])
     times.sort()
     #times = []
     #print(times)
@@ -655,48 +680,48 @@ def  _transitMNR(stop, direction, responses, API):
     times = []
     destination = []
     #print(API)
-    response = requests.get("https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-mnr", headers={'x-api-key' : API})
-    feed = gtfs_realtime_pb2.FeedMessage()
-    feed.ParseFromString(response.content)
-    '''
-    with open(f"logs/MNR/{(datetime.datetime.now()).strftime('%d%m%Y')}.txt","w") as test:
-        test.write(str(feed)+ f" {datetime.datetime.now()}\n")
-    '''
-    for entity in feed.entity:
-        for update in entity.trip_update.stop_time_update:
-            if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
-                station_id = update.stop_id
-                time = update.arrival.time
-                if (time < 0):
-                    time = update.departure.time
-                time = datetime.datetime.fromtimestamp(time)
-                time = math.trunc(((time - current_time).total_seconds()) / 60)
-                #print(time)
-                if (time < 0):
-                    continue 
-                if entity.trip_update.trip.trip_id[-2] == "_":
-                    vehicle = entity.trip_update.trip.trip_id
-                    vehicle = vehicle.replace("_","")
-                    vehicle = entity.trip_update.trip.trip_id[-6:-2]
-                else:
-                    vehicle = entity.trip_update.trip.trip_id[-4:]
-                trip_id = entity.trip_update.trip.trip_id
-                route_id = entity.trip_update.trip.route_id
-                direction = entity.trip_update.trip.direction_id
-                station_id_list = []
-                for update in entity.trip_update.stop_time_update:
-                    destination.append(update.stop_id)
-                    station_id_list.append(update.stop_id)
-                #print(service_description)
-                station_stop_list = [convertMNR(i) for i in station_id_list]
-                terminus_id = destination[-1]
-            
-                #print(stop)
+    links = asyncio.get_event_loop().run_until_complete(_requestFeedMTA(_url(["https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/mnr%2Fgtfs-mnr"]), API))
+    
+    for link in links:
+    
+        feed = gtfs_realtime_pb2.FeedMessage()
+        feed.ParseFromString(link)
 
-                times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
-                #print(data["gtfs"]["stops"])
-                #for i in data["gtfs"]["stops"]:
-                #print(i["stop_id"] + " " + i["stop_name"])
+        for entity in feed.entity:
+            for update in entity.trip_update.stop_time_update:
+                if ((update.stop_id == stop) and (str(entity.trip_update.trip.direction_id) == str(direction))):
+                    station_id = update.stop_id
+                    time = update.arrival.time
+                    if (time < 0):
+                        time = update.departure.time
+                    time = datetime.datetime.fromtimestamp(time)
+                    time = math.trunc(((time - current_time).total_seconds()) / 60)
+                    #print(time)
+                    if (time < 0):
+                        continue 
+                    if entity.trip_update.trip.trip_id[-2] == "_":
+                        vehicle = entity.trip_update.trip.trip_id
+                        vehicle = vehicle.replace("_","")
+                        vehicle = entity.trip_update.trip.trip_id[-6:-2]
+                    else:
+                        vehicle = entity.trip_update.trip.trip_id[-4:]
+                    trip_id = entity.trip_update.trip.trip_id
+                    route_id = entity.trip_update.trip.route_id
+                    direction = entity.trip_update.trip.direction_id
+                    station_id_list = []
+                    for update in entity.trip_update.stop_time_update:
+                        destination.append(update.stop_id)
+                        station_id_list.append(update.stop_id)
+                    #print(service_description)
+                    station_stop_list = [convertMNR(i) for i in station_id_list]
+                    terminus_id = destination[-1]
+                
+                    #print(stop)
+
+                    times.append([time, route_id, terminus_id, station_id, direction, trip_id, station_id_list, station_stop_list, vehicle])
+                    #print(data["gtfs"]["stops"])
+                    #for i in data["gtfs"]["stops"]:
+                    #print(i["stop_id"] + " " + i["stop_name"])
     times.sort()
     #times = []
     #print(times)
